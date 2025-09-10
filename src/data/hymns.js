@@ -1,10 +1,8 @@
 export const hymns = [
-  // Reordered to match the user-provided sequence (1..82).
-  // Placeholders (no original lyrics found) added for: 21, 23, 24, 81.
   {
     id: 1,
     title: "Only You Are Holy",
-    author: "Donnie McClurkin",
+    authors: ["Donnie McClurkin"],
     year: 2004,
     verses: [
       {
@@ -18,7 +16,7 @@ export const hymns = [
   {
     id: 2,
     title: "All Glory Must Be To The Lord",
-    author: "Chris Christensen",
+    authors: ["Chris Christensen"],
     verses: [
       {
         type: "verse",
@@ -31,7 +29,7 @@ export const hymns = [
   {
     id: 3,
     title: "Ascribe Greatness To Our God The Rock",
-    author: "Peter West; Mary Kirkbride; Mary Lou King",
+    authors: ["Peter West", "Mary Kirkbride", "Mary Lou King"],
     year: 1979,
     verses: [
       {
@@ -51,7 +49,7 @@ export const hymns = [
   {
     id: 4,
     title: "You Are Beautiful Beyond Description (I Stand In Awe)",
-    author: "Mark Altrogge",
+    authors: ["Mark Altrogge"],
     year: 1986,
     verses: [
       {
@@ -77,7 +75,7 @@ export const hymns = [
   {
     id: 5,
     title: "Jesus Name Above All Names",
-    author: "Naida Hearn",
+    authors: ["Naida Hearn"],
     year: 1978,
     verses: [
       {
@@ -103,7 +101,7 @@ export const hymns = [
   {
     id: 6,
     title: "Because He Lives",
-    author: "Bill & Gloria Gaither",
+    authors: ["Bill Gaither", "Gloria Gaither"],
     year: 2001,
     verses: [
       {
@@ -135,7 +133,7 @@ export const hymns = [
   {
     id: 7,
     title: "All Your Anxiety All Your Cares",
-    author: "Edward H. Joy",
+    authors: ["Edward H. Joy"],
     year: 1929,
     verses: [
       {
@@ -167,7 +165,7 @@ export const hymns = [
   {
     id: 8,
     title: "Blessed Be The Name Of The Lord, You Are Worthy",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1993,
     verses: [
       {
@@ -187,7 +185,7 @@ export const hymns = [
   {
     id: 9,
     title: "Down At Your Feet Oh Lord",
-    author: "Greg Gulley, Lenny Le Blanc",
+    authors: ["Greg Gulley", "Lenny Le Blanc"],
     year: 1989,
     verses: [
       {
@@ -207,7 +205,7 @@ export const hymns = [
   {
     id: 10,
     title: "Excellent Is Your Name, Excellent Is Your Power",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "verse",
@@ -226,7 +224,7 @@ export const hymns = [
   {
     id: 11,
     title: "How Excellent Is Your Name Oh Lord",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "verse",
@@ -239,7 +237,7 @@ export const hymns = [
   {
     id: 12,
     title: "The Steadfast Love Never Ceases",
-    author: "Edith McNeill",
+    authors: ["Edith McNeill"],
     year: 1974,
     verses: [
       {
@@ -253,7 +251,7 @@ export const hymns = [
   {
     id: 13,
     title: "Your Steadfast Love Extends To The Heavens",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1992,
     verses: [
       {
@@ -273,7 +271,7 @@ export const hymns = [
   {
     id: 14,
     title: "I Love You Lord And I Lift My Voice",
-    author: "Laurie B. Klein",
+    authors: ["Laurie B. Klein"],
     year: 1992,
     verses: [
       {
@@ -287,7 +285,7 @@ export const hymns = [
   {
     id: 15,
     title: "Worthy, You Are Worthy",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1986,
     verses: [
       {
@@ -313,7 +311,7 @@ export const hymns = [
   {
     id: 16,
     title: "There Is None Holy As The Lord",
-    author: "Gary Garratt",
+    authors: ["Gary Garratt"],
     year: 1982,
     verses: [
       {
@@ -327,7 +325,7 @@ export const hymns = [
   {
     id: 17,
     title: "Lord You Are More Precious",
-    author: "Lynn DeShazo",
+    authors: ["Lynn DeShazo"],
     year: 1978,
     verses: [
       {
@@ -341,7 +339,7 @@ export const hymns = [
   {
     id: 18,
     title: "There Is None Like You",
-    author: "Lenny Le Blanc",
+    authors: ["Lenny Le Blanc"],
     year: 1991,
     verses: [
       {
@@ -361,7 +359,7 @@ export const hymns = [
   {
     id: 19,
     title: "How Great Is Your Love",
-    author: "MercyMe",
+    authors: ["MercyMe"],
     year: 1999,
     verses: [
       {
@@ -393,7 +391,7 @@ export const hymns = [
   {
     id: 20,
     title: "When I Gaze Into Your Loveliness",
-    author: "Kent Henry",
+    authors: ["Kent Henry"],
     year: 1986,
     verses: [
       {
@@ -413,14 +411,14 @@ export const hymns = [
   {
     id: 21,
     title: "Hear My Cry Oh Lord, Attend Unto My Prayer",
-    author: "",
+    authors: [],
     verses: [],
     note: "Placeholder – lyrics not provided in original dataset.",
   },
   {
     id: 22,
     title: "As The Deer Panteth For The Water",
-    author: "Martin Nystrom",
+    authors: ["Martin Nystrom"],
     year: 1984,
     verses: [
       {
@@ -452,21 +450,21 @@ export const hymns = [
   {
     id: 23,
     title: "Here We Are, Lifting Our Hands To You",
-    author: "",
+    authors: [],
     verses: [],
     note: "Placeholder – not found in original dataset.",
   },
   {
     id: 24,
     title: "Have Your Way, Holy Spirit Fill Our Hearts",
-    author: "",
+    authors: [],
     verses: [],
     note: "Placeholder – not found in original dataset.",
   },
   {
     id: 25,
     title: "And With Our Hands Lifted",
-    author: "Dennis Jernigan",
+    authors: ["Dennis Jernigan"],
     year: 2002,
     verses: [
       {
@@ -486,8 +484,7 @@ export const hymns = [
   {
     id: 26,
     title: "Be Magnified Oh Lord, You Are Highly Exalted",
-    // Based on "Be Magnified Oh Lord"
-    author: "Lynn DeShazo, Don Moen",
+    authors: ["Lynn DeShazo", "Don Moen"],
     year: 1998,
     verses: [
       {
@@ -513,7 +510,7 @@ export const hymns = [
   {
     id: 27,
     title: "We Cannot Say Enough",
-    author: "MercyMe",
+    authors: ["MercyMe"],
     year: 1999,
     verses: [
       {
@@ -539,7 +536,7 @@ export const hymns = [
   {
     id: 28,
     title: "As We Gather",
-    author: "Maranatha Praise Band",
+    authors: ["Maranatha Praise Band"],
     year: 1996,
     verses: [
       {
@@ -553,7 +550,7 @@ export const hymns = [
   {
     id: 29,
     title: "Goodness of God",
-    author: "Cece Winans",
+    authors: ["Cece Winans"],
     year: 2021,
     verses: [
       {
@@ -585,7 +582,7 @@ export const hymns = [
   {
     id: 30,
     title: "God of Wonders Beyond Our Galaxy",
-    author: "Mark Byrd and Steve Hindalong",
+    authors: ["Mark Byrd", "Steve Hindalong"],
     year: 2000,
     verses: [
       {
@@ -635,7 +632,7 @@ export const hymns = [
   {
     id: 31,
     title: "I Will Sing of the Mercies of the Lord Forever",
-    author: "James Henry Fillmore",
+    authors: ["James Henry Fillmore"],
     year: "1849-1936",
     verses: [
       {
@@ -661,7 +658,7 @@ export const hymns = [
   {
     id: 32,
     title: "Here I Am, Humbled by Your Majesty",
-    author: "Martin Smith / Stuart Garrard",
+    authors: ["Martin Smith", "Stuart Garrard"],
     year: 2003,
     verses: [
       {
@@ -687,7 +684,7 @@ export const hymns = [
   {
     id: 33,
     title: "Thank You, Thank You Lord",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "chorus",
@@ -706,7 +703,7 @@ export const hymns = [
   {
     id: 34,
     title: "We Are Grateful, O Lord",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "chorus",
@@ -719,7 +716,7 @@ export const hymns = [
   {
     id: 35,
     title: "Thanks, Thanks, We Give You Thanks",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "chorus",
@@ -732,7 +729,7 @@ export const hymns = [
   {
     id: 36,
     title: "Jesus, Holy and Anointed One",
-    author: "John Barnett",
+    authors: ["John Barnett"],
     year: 1988,
     verses: [
       {
@@ -751,7 +748,7 @@ export const hymns = [
   {
     id: 37,
     title: "Jesus, Lamb of God, Worthy Is Your Name",
-    author: "Dennis Jernigan",
+    authors: ["Dennis Jernigan"],
     year: 1991,
     verses: [
       {
@@ -777,7 +774,7 @@ export const hymns = [
   {
     id: 38,
     title: "Oh Lord, Your Tenderness",
-    author: "Graham Kendrick",
+    authors: ["Graham Kendrick"],
     year: 1986,
     verses: [
       {
@@ -802,7 +799,7 @@ export const hymns = [
   {
     id: 39,
     title: "You Deserve the Glory and the Honour",
-    author: "Terry MacAlmon",
+    authors: ["Terry MacAlmon"],
     year: 2000,
     verses: [
       {
@@ -822,7 +819,7 @@ export const hymns = [
   {
     id: 40,
     title: "For Your Name Is Holy",
-    author: "Paul Wilbur",
+    authors: ["Paul Wilbur"],
     year: 1999,
     verses: [
       {
@@ -848,7 +845,7 @@ export const hymns = [
   {
     id: 41,
     title: "In Your Presence I Am Content",
-    author: "Chris Bowater",
+    authors: ["Chris Bowater"],
     year: 1989,
     verses: [
       {
@@ -862,7 +859,7 @@ export const hymns = [
   {
     id: 42,
     title: "Who Is Like Unto Thee",
-    author: "July Horner Montemayor",
+    authors: ["July Horner Montemayor"],
     year: 1975,
     verses: [
       {
@@ -876,7 +873,7 @@ export const hymns = [
   {
     id: 43,
     title: "What a Mighty God We Serve",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "chorus",
@@ -889,7 +886,7 @@ export const hymns = [
   {
     id: 44,
     title: "Our Father, Hear Us from Heaven",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "verse",
@@ -920,7 +917,7 @@ export const hymns = [
   {
     id: 45,
     title: "Hallelujah to the Lamb",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "verse",
@@ -945,7 +942,7 @@ export const hymns = [
   {
     id: 46,
     title: "He Is Lord, He Is Lord",
-    author: "Steve Vest",
+    authors: ["Steve Vest"],
     year: 1969,
     verses: [
       {
@@ -965,7 +962,7 @@ export const hymns = [
   {
     id: 47,
     title: "My Soul Doth Magnify the Lord",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "verse",
@@ -978,7 +975,7 @@ export const hymns = [
   {
     id: 48,
     title: "Unto You",
-    author: "Bob Fitts",
+    authors: ["Bob Fitts"],
     year: 1989,
     verses: [
       {
@@ -998,7 +995,7 @@ export const hymns = [
   {
     id: 49,
     title: "I See the Lord",
-    author: "Integrity's Hosanna! Music and Ron Kenoly",
+    authors: ["Integrity's Hosanna! Music", "Ron Kenoly"],
     year: 1994,
     verses: [
       {
@@ -1018,7 +1015,7 @@ export const hymns = [
   {
     id: 50,
     title: "Lift Him Up",
-    author: "Ron Kenoly",
+    authors: ["Ron Kenoly"],
     year: 1992,
     verses: [
       {
@@ -1044,7 +1041,7 @@ export const hymns = [
   {
     id: 51,
     title: "Hallowed Be Your Name",
-    author: "Ron Kenoly",
+    authors: ["Ron Kenoly"],
     year: 1992,
     verses: [
       {
@@ -1070,7 +1067,7 @@ export const hymns = [
   {
     id: 52,
     title: "We Give You Thanks",
-    author: "Alvin Slaughter",
+    authors: ["Alvin Slaughter"],
     year: 1994,
     verses: [
       {
@@ -1096,7 +1093,7 @@ export const hymns = [
   {
     id: 53,
     title: "Thank You Lord",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 2004,
     verses: [
       {
@@ -1122,7 +1119,7 @@ export const hymns = [
   {
     id: 54,
     title: "Be It Unto Me According to Your Word",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1995,
     verses: [
       {
@@ -1148,7 +1145,7 @@ export const hymns = [
   {
     id: 55,
     title: "There Is a Redeemer",
-    author: "Keith and Melody Green",
+    authors: ["Keith Green", "Melody Green"],
     year: 1977,
     verses: [
       {
@@ -1180,7 +1177,7 @@ export const hymns = [
   {
     id: 56,
     title: "Cast Thy Burdens Upon the Lord",
-    author: "Psalm 55:22",
+    authors: ["Psalm 55:22"],
     verses: [
       {
         type: "verse",
@@ -1199,7 +1196,7 @@ export const hymns = [
   {
     id: 57,
     title: "Let the Weight of Your Glory Fall",
-    author: "Paul Wilbur",
+    authors: ["Paul Wilbur"],
     verses: [
       {
         type: "verse",
@@ -1224,7 +1221,7 @@ export const hymns = [
   {
     id: 58,
     title: "Be Thou Exalted, O Lord Above the Heavens",
-    author: "Traditional",
+    authors: ["Traditional"],
     verses: [
       {
         type: "chorus",
@@ -1237,7 +1234,7 @@ export const hymns = [
   {
     id: 59,
     title: "You Are Here",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 2000,
     verses: [
       {
@@ -1257,7 +1254,7 @@ export const hymns = [
   {
     id: 60,
     title: "Blessed Be the Lord God Almighty",
-    author: "Bob Fitts",
+    authors: ["Bob Fitts"],
     year: 1985,
     verses: [
       {
@@ -1283,7 +1280,7 @@ export const hymns = [
   {
     id: 61,
     title: "We Give You Glory Lord",
-    author: "Rudolf Mabasa",
+    authors: ["Rudolf Mabasa"],
     year: 2018,
     verses: [
       {
@@ -1297,7 +1294,7 @@ export const hymns = [
   {
     id: 62,
     title: "You Are Alpha and Omega",
-    author: "Israel Houghton",
+    authors: ["Israel Houghton"],
     year: 2005,
     verses: [
       {
@@ -1311,7 +1308,7 @@ export const hymns = [
   {
     id: 63,
     title: "Ancient of Days",
-    author: "Ron Kenoly",
+    authors: ["Ron Kenoly"],
     verses: [
       {
         type: "verse",
@@ -1336,7 +1333,7 @@ export const hymns = [
   {
     id: 64,
     title: "Ancient of Days",
-    author: "CityAlight",
+    authors: ["CityAlight"],
     verses: [
       {
         type: "verse",
@@ -1367,7 +1364,7 @@ export const hymns = [
   {
     id: 65,
     title: "Every Time That We Are Gathered",
-    author: "Maranatha Music",
+    authors: ["Maranatha Music"],
     year: 1995,
     verses: [
       {
@@ -1387,7 +1384,7 @@ export const hymns = [
   {
     id: 66,
     title: "Lord Most High, Be Magnified",
-    author: "Bob Fitts and Integrity’s Hosanna Music",
+    authors: ["Bob Fitts", "Integrity’s Hosanna Music"],
     year: 1996,
     verses: [
       {
@@ -1407,7 +1404,7 @@ export const hymns = [
   {
     id: 67,
     title: "He Is Exalted",
-    author: "Twila Paris",
+    authors: ["Twila Paris"],
     year: 1985,
     verses: [
       {
@@ -1427,7 +1424,7 @@ export const hymns = [
   {
     id: 68,
     title: "Majesty",
-    author: "Jack Hayford",
+    authors: ["Jack Hayford"],
     year: 1987,
     verses: [
       {
@@ -1447,7 +1444,7 @@ export const hymns = [
   {
     id: 69,
     title: "As We Worship You",
-    author: "Don Moen and Integrity’s Hosanna Music",
+    authors: ["Don Moen", "Integrity’s Hosanna Music"],
     year: 2001,
     verses: [
       {
@@ -1473,7 +1470,7 @@ export const hymns = [
   {
     id: 70,
     title: "We've Come to Bless Your Name",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1997,
     verses: [
       {
@@ -1499,7 +1496,7 @@ export const hymns = [
   {
     id: 71,
     title: "I Worship You, Almighty God",
-    author: "Don Moen",
+    authors: ["Don Moen"],
     year: 1992,
     verses: [
       {
@@ -1513,7 +1510,7 @@ export const hymns = [
   {
     id: 72,
     title: "We Delight",
-    author: "Caedmon's Call",
+    authors: ["Caedmon's Call"],
     verses: [
       {
         type: "chorus",
@@ -1544,7 +1541,7 @@ export const hymns = [
   {
     id: 73,
     title: "Only There",
-    author: "Shane and Shane",
+    authors: ["Shane and Shane"],
     year: 2021,
     verses: [
       {
@@ -1576,7 +1573,7 @@ export const hymns = [
   {
     id: 74,
     title: "Magnificent, Marvelous, Matchless Love",
-    author: "Keith and Kristyn Getty",
+    authors: ["Keith Getty", "Kristyn Getty"],
     year: 2018,
     verses: [
       {
@@ -1614,7 +1611,7 @@ export const hymns = [
   {
     id: 75,
     title: "Come Behold the Wondrous Mystery",
-    author: "Keith & Kristyn Getty, Matt Boswell, and Matt Papa",
+    authors: ["Keith Getty", "Kristyn Getty", "Matt Boswell", "Matt Papa"],
     year: 2020,
     verses: [
       {
@@ -1646,7 +1643,7 @@ export const hymns = [
   {
     id: 76,
     title: "Day After Day",
-    author: "CityAlight",
+    authors: ["CityAlight"],
     verses: [
       {
         type: "verse",
@@ -1683,7 +1680,7 @@ export const hymns = [
   {
     id: 77,
     title: "Holy Forever",
-    author: "Chris Tomlin",
+    authors: ["Chris Tomlin"],
     verses: [
       {
         type: "verse",
@@ -1720,7 +1717,7 @@ export const hymns = [
   {
     id: 78,
     title: "You Are God Alone (Not a God)",
-    author: "Phillips, Craig and Dean",
+    authors: ["Phillips, Craig and Dean"],
     year: 2004,
     verses: [
       {
@@ -1751,7 +1748,7 @@ export const hymns = [
   {
     id: 79,
     title: "My Savior’s Love",
-    author: "Matt Boswell and Matt Papa",
+    authors: ["Matt Boswell", "Matt Papa"],
     year: 2019,
     verses: [
       {
@@ -1783,7 +1780,7 @@ export const hymns = [
   {
     id: 80,
     title: "At the Cross",
-    author: "Chris Tomlin",
+    authors: ["Chris Tomlin"],
     year: 2014,
     verses: [
       {
@@ -1815,14 +1812,21 @@ export const hymns = [
   {
     id: 81,
     title: "On That Day",
-    author: "",
-    verses: [],
-    note: "Placeholder – title supplied but lyrics not in original dataset.",
+    authors: ["CityAlight"],
+    year: 2022,
+    verses: [
+      {
+        type: "verse",
+        number: 1,
+        content:
+          "I believe in Christ, risen from the dead\nHe now reigns victorious, His kingdom knows no end\nThrough His resurrection death has lost its hold\nI know on that final day, I'll rise as Jesus rose",
+      },
+    ],
   },
   {
     id: 82,
     title: "Let There Be Glory and Honor and Praises",
-    author: "Kent Henry",
+    authors: ["Kent Henry"],
     year: 1985,
     verses: [
       {

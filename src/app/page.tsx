@@ -3,9 +3,9 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Menu, Music, Filter, Book, ArrowRight } from "lucide-react";
-import { hymns } from "@/data/hymns";
+import { Search, Menu, Music, Filter, ArrowRight } from "lucide-react";
 import { Montserrat } from "next/font/google";
+import { hymns } from "@/data/hymns";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,23 +13,38 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+type Hymn = {
+  id: number;
+  title: string;
+  authors: string[];
+  year?: number;
+  verses: {
+    type: string;
+    number: number;
+    content: string;
+  }[];
+  note?: string;
+};
+
 export default function HymnCollectionPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("all");
 
-  const authors = ["all", ...new Set(hymns.map((hymn) => hymn.author))];
+  const authors = ["all", ...new Set(hymns.flatMap((hymn) => hymn.authors))];
 
   const filteredHymns = useMemo(() => {
-    return hymns.filter((hymn) => {
+    return hymns.filter((hymn: Hymn) => {
       const matchesSearch =
         searchQuery === "" ||
         hymn.id.toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
         hymn.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hymn.author.toLowerCase().includes(searchQuery.toLowerCase());
+        hymn.authors.some((author) =>
+          author.toLowerCase().includes(searchQuery.toLowerCase())
+        );
 
       const matchesAuthor =
-        selectedAuthor === "all" || hymn.author === selectedAuthor;
+        selectedAuthor === "all" || hymn.authors.includes(selectedAuthor);
 
       return matchesSearch && matchesAuthor;
     });
@@ -195,7 +210,8 @@ export default function HymnCollectionPage() {
 
                         <div className="space-y-1 mb-3">
                           <p className="text-white/80 text-sm">
-                            by {hymn.author} <span>&copy; {hymn.year}</span>
+                            by {hymn.authors.join(", ")}{" "}
+                            <span>&copy; {hymn.year}</span>
                           </p>
                         </div>
                       </Link>

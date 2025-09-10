@@ -4,27 +4,16 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu, Music, Filter, ArrowRight } from "lucide-react";
-import { Montserrat } from "next/font/google";
-import { hymns } from "@/data/hymns";
+import { EB_Garamond } from "next/font/google";
 
-const montserrat = Montserrat({
+import { hymns } from "@/app/data/hymns";
+import { Hymn } from "@/app/types/hymn";
+
+const garamond = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "600"],
   display: "swap",
 });
-
-type Hymn = {
-  id: number;
-  title: string;
-  authors: string[];
-  year?: number;
-  verses: {
-    type: string;
-    number: number;
-    content: string;
-  }[];
-  note?: string;
-};
 
 export default function HymnCollectionPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,9 +40,7 @@ export default function HymnCollectionPage() {
   }, [searchQuery, selectedAuthor]);
 
   return (
-    <div
-      className={`min-h-screen bg-[#121212] relative ${montserrat.className}`}
-    >
+    <div className={`min-h-screen bg-[#121212] relative ${garamond.className}`}>
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -85,7 +72,7 @@ export default function HymnCollectionPage() {
             rel="noopener noreferrer"
           >
             Church&apos;s Website
-            <div className="absolute -bottom-1 left-0 w-full h-px bg-[#7E040C]"></div>
+            <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
           </Link>
           <Link
             href="#"
@@ -117,7 +104,7 @@ export default function HymnCollectionPage() {
               rel="noopener noreferrer"
             >
               Church&apos;s Website
-              <div className="absolute -bottom-1 left-0 w-full h-px bg-[#7E040C]"></div>
+              <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
             </Link>
             <Link
               href="#"
@@ -140,10 +127,17 @@ export default function HymnCollectionPage() {
               <h1 className="text-white font-semibold text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2">
                 SGCC Collection of Songs
               </h1>
-              <p className="text-[#C7C7C7] text-sm sm:text-base">
-                Browse or search through the collection of hymns.
+              <p className="text-[#C7C7C7] text-lg">
+                Explore the collection of{" "}
+                <span className="font-bold">{hymns.length}</span> hymns sang at{" "}
+                <span className="font-bold">
+                  Sovereign Grace Community Church, Abuja
+                </span>
+                .
               </p>
             </div>
+
+            <div className="border-t border-white/10 p-4"></div>
 
             {/* Search Bar */}
             <div className="relative">
@@ -152,7 +146,7 @@ export default function HymnCollectionPage() {
                 placeholder="Enter the hymn number, title, or author name..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="block w-full px-4 py-2 pl-10 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 text-sm focus:outline-none focus:border-[#7E040C] focus:bg-white/15 transition-all duration-200"
+                className="block w-full px-4 py-2 pl-10 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/60 text-lg focus:outline-none focus:border-[#722b41] focus:bg-white/15 transition-all duration-200"
               />
               <Search
                 size={16}
@@ -163,17 +157,20 @@ export default function HymnCollectionPage() {
             <div className="block w-full p-6">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-white font-semibold text-sm mb-3 flex items-center">
-                    <Filter size={16} className="mr-2 text-[#7E040C]" />
-                    Filters (by Authors)
+                  <h3 className="text-white font-semibold text-lg mb-3 flex items-center">
+                    <Filter size={16} className="mr-2 text-[#722b41]" />
+                    Filters
                   </h3>
 
                   <div className="space-y-4">
                     <select
                       value={selectedAuthor}
                       onChange={(e) => setSelectedAuthor(e.target.value)}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white text-sm focus:outline-none focus:border-[#7E040C] focus:bg-white/15 transition-all duration-200"
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white text-sm focus:outline-none focus:border-[#722b41] focus:bg-white/15 transition-all duration-200"
                     >
+                      <option value="all" disabled>
+                        Select an Author
+                      </option>
                       {authors.sort().map((author) => (
                         <option
                           key={author}
@@ -185,13 +182,14 @@ export default function HymnCollectionPage() {
                       ))}
                     </select>
                   </div>
-                </div>
 
-                <div className="pt-4">
-                  <div className="text-white/60 text-sm">
-                    {filteredHymns.length} hymn
-                    {filteredHymns.length !== 1 ? "s" : ""} found
-                  </div>
+                  {selectedAuthor !== "all" && (
+                    <div className="mt-4 text-white/60 text-lg">
+                      Showing {filteredHymns.length} hymn
+                      {filteredHymns.length !== 1 ? "s" : ""} by:{" "}
+                      <span className="font-bold">{selectedAuthor}</span>.
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -208,16 +206,18 @@ export default function HymnCollectionPage() {
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex-1">
                       <Link href={`/hymn/${hymn.id}`}>
-                        <p className="text-white/80 text-sm">Hymn {hymn.id}</p>
-                        <div className="flex items-center space-x-3 mb-2">
-                          <Music size={16} className="text-[#7E040C]" />
-                          <h3 className="text-white font-semibold text-lg group-hover:text-[#7E040C] transition-colors duration-200">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <Music size={16} className="text-[#722b41]" />
+                          <p className="text-2xl font-bold">{hymn.id}</p>
+                        </div>
+                        <div className="mb-2">
+                          <h3 className="text-white font-semibold text-lg group-hover: transition-colors duration-200">
                             {hymn.title}
                           </h3>
                         </div>
 
                         <div className="space-y-1 mb-3">
-                          <p className="text-white/80 text-sm">
+                          <p className="text-white/80 text-lg">
                             by {hymn.authors.join(", ")}{" "}
                             <span>&copy; {hymn.year}</span>
                           </p>
@@ -228,7 +228,7 @@ export default function HymnCollectionPage() {
                     <div className="mt-4 sm:mt-0 sm:ml-6">
                       <Link
                         href={`/hymn/${hymn.id}`}
-                        className="inline-flex items-center space-x-2 px-4 py-2 bg-[#7E040C] text-[#ffffff] font-semibold text-sm rounded-full hover:bg-[#C7884A] active:bg-[#8B5E33] transition-all duration-200"
+                        className="inline-flex items-center space-x-2 px-4 py-2 bg-[#722b41] text-[#ffffff] font-semibold text-sm rounded-full transition-all duration-200"
                       >
                         <span>View Lyrics</span>
                         <ArrowRight size={14} />

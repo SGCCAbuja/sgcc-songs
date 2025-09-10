@@ -4,10 +4,11 @@ import { useState, use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Music, Heart, Share } from "lucide-react";
-import { hymns } from "@/data/hymns";
-import { Montserrat } from "next/font/google";
+import { EB_Garamond } from "next/font/google";
 
-const montserrat = Montserrat({
+import { hymns } from "@/app/data/hymns";
+
+const garamond = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "600"],
   display: "swap",
@@ -36,12 +37,12 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
       <div className="min-h-screen bg-[#121212] flex items-center justify-center">
         <div className="text-center">
           <Music size={48} className="text-white/30 mx-auto mb-4" />
-          <h2 className={`text-white/60 text-xl mb-2 ${montserrat.className}`}>
+          <h2 className={`text-white/60 text-xl mb-2 ${garamond.className}`}>
             Hymn not found
           </h2>
           <Link
             href="/"
-            className="text-[#7E040C] hover:text-[#C7884A] text-sm"
+            className="text-[#722b41] hover:text-[#C7884A] text-sm"
           >
             Return to collection
           </Link>
@@ -51,9 +52,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
   }
 
   return (
-    <div
-      className={`min-h-screen bg-[#121212] relative ${montserrat.className}`}
-    >
+    <div className={`min-h-screen bg-[#121212] relative ${garamond.className}`}>
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -94,7 +93,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
             onClick={() => setIsFavorite(!isFavorite)}
             className={`p-2 rounded-full border transition-all duration-200 ${
               isFavorite
-                ? "border-[#7E040C] bg-[#7E040C]/20 text-[#7E040C]"
+                ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
                 : "border-white/20 text-white/60 hover:border-white/40 hover:text-white/80"
             }`}
           >
@@ -113,13 +112,15 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
         <div className="mb-8 text-center">
           <div className="space-y-4 relative">
             {/* Bronze rule */}
-            <div className="w-14 h-px bg-[#7E040C] mx-auto"></div>
+            <div className="w-14 h-px bg-[#722b41] mx-auto"></div>
 
             <div>
               <h1 className="text-white font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
                 {hymn.title}
               </h1>
-              <p className="text-[#C7C7C7] text-lg">by {hymn.author}</p>
+              <p className="text-[#C7C7C7] text-lg">
+                by {hymn.authors.join(", ")}
+              </p>
               <div className="flex items-center justify-center space-x-4 text-white/60 text-sm mt-2">
                 <span>&copy; {hymn.year}</span>
               </div>
@@ -132,10 +133,10 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
           <div className="prose prose-invert max-w-none space-y-8">
             {hymn.verses.map((section, index) => (
               <div key={index} className="space-y-3">
-                <h3 className="text-[#7E040C] font-semibold text-sm uppercase tracking-wide">
+                <h3 className="text-[#722b41] font-semibold text-sm uppercase tracking-wide">
                   {formatSectionTitle(section)}
                 </h3>
-                <div className="text-white/90 text-base sm:text-lg leading-relaxed whitespace-pre-line pl-4 border-l border-white/20">
+                <div className="text-white/90 text-xl leading-relaxed whitespace-pre-line pl-4 border-l border-white/20">
                   {section.content}
                 </div>
               </div>
@@ -146,7 +147,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
         {/* Footer Actions */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-white/60 text-sm">
-            Share this hymn with others
+            Share this hymn with others:
           </div>
 
           <div className="flex items-center space-x-4">
@@ -154,7 +155,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
               Print Hymn
             </button>
 
-            <button className="px-6 py-2 bg-[#7E040C] text-[#fffff] font-semibold text-sm rounded-full hover:bg-[#C7884A] active:bg-[#8B5E33] transition-all duration-200">
+            <button className="px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200">
               Share Link to Hymn
             </button>
           </div>

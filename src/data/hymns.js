@@ -1384,7 +1384,7 @@ export const hymns = [
   {
     id: 66,
     title: "Lord Most High, Be Magnified",
-    authors: ["Bob Fitts", "Integrity’s Hosanna Music"],
+    authors: ["Bob Fitts", "Integrity's Hosanna! Music"],
     year: 1996,
     verses: [
       {
@@ -1444,7 +1444,7 @@ export const hymns = [
   {
     id: 69,
     title: "As We Worship You",
-    authors: ["Don Moen", "Integrity’s Hosanna Music"],
+    authors: ["Don Moen", "Integrity's Hosanna! Music"],
     year: 2001,
     verses: [
       {

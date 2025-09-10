@@ -81,6 +81,8 @@ export default function HymnCollectionPage() {
           <Link
             href="https://sgcc.ng"
             className="text-white text-sm tracking-wide relative hover:text-white/90 active:text-white/70 transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Church&apos;s Website
             <div className="absolute -bottom-1 left-0 w-full h-px bg-[#7E040C]"></div>
@@ -88,6 +90,8 @@ export default function HymnCollectionPage() {
           <Link
             href="#"
             className="text-white/80 hover:text-white active:text-white/60 text-sm tracking-wide transition-colors duration-200"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Join us Live
           </Link>
@@ -109,6 +113,8 @@ export default function HymnCollectionPage() {
             <Link
               href="#"
               className="text-white text-sm tracking-wide relative hover:text-white/90 active:text-white/70 transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Church&apos;s Website
               <div className="absolute -bottom-1 left-0 w-full h-px bg-[#7E040C]"></div>
@@ -116,6 +122,8 @@ export default function HymnCollectionPage() {
             <Link
               href="#"
               className="text-white/80 hover:text-white active:text-white/60 text-sm tracking-wide transition-colors duration-200"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Join us Live
             </Link>
@@ -166,7 +174,7 @@ export default function HymnCollectionPage() {
                       onChange={(e) => setSelectedAuthor(e.target.value)}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white text-sm focus:outline-none focus:border-[#7E040C] focus:bg-white/15 transition-all duration-200"
                     >
-                      {authors.map((author) => (
+                      {authors.sort().map((author) => (
                         <option
                           key={author}
                           value={author}

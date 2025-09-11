@@ -4,13 +4,13 @@ import { useState, use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Music, Heart, Share } from "lucide-react";
-import { EB_Garamond } from "next/font/google";
+import { Cardo } from "next/font/google";
 
 import { hymns } from "@/app/data/hymns";
 
-const garamond = EB_Garamond({
+const cardo = Cardo({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -37,7 +37,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
       <div className="min-h-screen bg-[#121212] flex items-center justify-center">
         <div className="text-center">
           <Music size={48} className="text-white/30 mx-auto mb-4" />
-          <h2 className={`text-white/60 text-xl mb-2 ${garamond.className}`}>
+          <h2 className={`text-white/60 text-xl mb-2 ${cardo.className}`}>
             Hymn not found
           </h2>
           <Link
@@ -52,7 +52,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
   }
 
   return (
-    <div className={`min-h-screen bg-[#121212] relative ${garamond.className}`}>
+    <div className={`min-h-screen bg-[#121212] relative ${cardo.className}`}>
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -116,14 +116,11 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
 
             <div>
               <h1 className="text-white font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
-                {hymn.title}
+                {hymn.title.toUpperCase()}
               </h1>
               <p className="text-[#C7C7C7] text-lg">
-                by {hymn.authors.join(", ")}
+                by {hymn.authors.join(", ")} &copy; {hymn.year}
               </p>
-              <div className="flex items-center justify-center space-x-4 text-white/60 text-sm mt-2">
-                <span>&copy; {hymn.year}</span>
-              </div>
             </div>
           </div>
         </div>

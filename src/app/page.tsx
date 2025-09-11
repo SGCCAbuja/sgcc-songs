@@ -4,14 +4,14 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu, Music, Filter, ArrowRight } from "lucide-react";
-import { EB_Garamond } from "next/font/google";
+import { Cardo } from "next/font/google";
 
 import { hymns } from "@/app/data/hymns";
 import { Hymn } from "@/app/types/hymn";
 
-const garamond = EB_Garamond({
+const cardo = Cardo({
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -40,7 +40,7 @@ export default function HymnCollectionPage() {
   }, [searchQuery, selectedAuthor]);
 
   return (
-    <div className={`min-h-screen bg-[#121212] relative ${garamond.className}`}>
+    <div className={`min-h-screen bg-[#121212] relative ${cardo.className}`}>
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -67,11 +67,11 @@ export default function HymnCollectionPage() {
         <div className="hidden md:flex items-center space-x-6 lg:space-x-4">
           <Link
             href="https://sgcc.ng"
-            className="text-white text-sm tracking-wide relative hover:text-white/90 active:text-white/70 transition-colors duration-200"
+            className="text-white text-sm tracking-wide relative group-hover:text-white/90 active:text-white/70 transition-colors duration-200"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Church&apos;s Website
+            Church Website →
             <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
           </Link>
           <Link
@@ -80,7 +80,7 @@ export default function HymnCollectionPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Join us Live
+            Join us Live 🎥
           </Link>
         </div>
 
@@ -103,8 +103,7 @@ export default function HymnCollectionPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Church&apos;s Website
-              <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
+              Church Website →
             </Link>
             <Link
               href="#"
@@ -112,7 +111,7 @@ export default function HymnCollectionPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Join us Live
+              Join us Live 🎥
             </Link>
           </div>
         </div>
@@ -157,16 +156,16 @@ export default function HymnCollectionPage() {
             <div className="block w-full p-6">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-white font-semibold text-lg mb-3 flex items-center">
+                  <h3 className="text-white font-semibold text-sm mb-3 flex items-center">
                     <Filter size={16} className="mr-2 text-[#722b41]" />
-                    Filters
+                    Filter (by author name)
                   </h3>
 
                   <div className="space-y-4">
                     <select
                       value={selectedAuthor}
                       onChange={(e) => setSelectedAuthor(e.target.value)}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white text-sm focus:outline-none focus:border-[#722b41] focus:bg-white/15 transition-all duration-200"
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded text-white text-lg focus:outline-none focus:border-[#722b41] focus:bg-white/15 transition-all duration-200"
                     >
                       <option value="all" disabled>
                         Select an Author

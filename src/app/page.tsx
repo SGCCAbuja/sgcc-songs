@@ -218,7 +218,7 @@ export default function HymnCollectionPage() {
                         <div className="space-y-1 mb-3">
                           <p className="text-white/80 text-lg">
                             by {hymn.authors.join(", ")}{" "}
-                            <span>&copy; {hymn.year}</span>
+                            <span>{!hymn.year ? "" : `© ${hymn.year}`}</span>
                           </p>
                         </div>
                       </Link>

@@ -2102,8 +2102,9 @@ export const hymns = [
       },
       {
         type: "chorus",
-        number: 2,
-        content: "[Repeat Chorus]",
+        number: 1,
+        content:
+          "On that day, we will see You shining brighter than the sun\nOn that day, we will know You as we lift our voice as one\nTill that day, we will praise You for Your never-ending grace\nAnd we will keep on singing on that glorious day",
       },
       {
         type: "verse",
@@ -2113,7 +2114,7 @@ export const hymns = [
       },
       {
         type: "chorus",
-        number: 3,
+        number: 2,
         content: "[Repeat Chorus]",
       },
       {
@@ -2124,7 +2125,7 @@ export const hymns = [
       },
       {
         type: "chorus",
-        number: 4,
+        number: 3,
         content: "[Repeat Chorus]",
       },
     ],

@@ -2,7 +2,7 @@ export type Hymn = {
   id: number;
   title: string;
   authors: string[];
-  year?: number;
+  year?: number | null;
   verses: {
     type: string;
     number: number;

@@ -85,10 +85,6 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
           >
             <Heart size={16} fill={isFavorite ? "currentColor" : "none"} />
           </button>
-
-          <button className="p-2 rounded-full border border-white/20 text-white/60 hover:border-white/40 hover:text-white/80 transition-all duration-200">
-            <Share size={16} />
-          </button>
         </div>
       </nav>
 
@@ -105,7 +101,8 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
                 {hymn.title.toUpperCase()}
               </h1>
               <p className="text-[#C7C7C7] text-lg">
-                by {hymn.authors.join(", ")} &copy; {hymn.year}
+                by {hymn.authors.join(", ")}{" "}
+                {!hymn.year ? "" : `© ${hymn.year}`}
               </p>
             </div>
           </div>
@@ -136,9 +133,10 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
           <div className="flex items-center space-x-4">
             <button
               onClick={() => shareLink(hymn.title)}
-              className="px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200"
+              className="flex items-center gap-x-2 px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200"
             >
-              Share Hymn
+              <Share size={16} />
+              <span>Share Hymn</span>
             </button>
           </div>
         </div>

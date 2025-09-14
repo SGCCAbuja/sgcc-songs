@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cardo } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cardo = Cardo({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -50,9 +46,9 @@ export const metadata: Metadata = {
     url: "https://songs.sgcc.ng",
     images: [
       {
-        url: "/cover.jpeg",
-        width: 500,
-        height: 500,
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
       },
     ],
   },
@@ -61,6 +57,7 @@ export const metadata: Metadata = {
     "songs",
     "worship",
     "SGCC",
+    "SGCC Abuja",
     "Sovereign Grace Community Church",
     "Reformed Baptist Church",
   ],
@@ -73,11 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={cardo.className}>{children}</body>
     </html>
   );
 }

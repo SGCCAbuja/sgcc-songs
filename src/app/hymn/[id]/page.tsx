@@ -4,16 +4,9 @@ import { useState, use } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Music, Heart, Share } from "lucide-react";
-import { Cardo } from "next/font/google";
 
 import { shareLink } from "@/app/utils/share";
 import { hymns } from "@/app/data/hymns";
-
-const cardo = Cardo({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
 
 interface HymnDetailPageProps {
   params: Promise<{ id: string }>;
@@ -38,9 +31,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
       <div className="min-h-screen bg-[#121212] flex items-center justify-center">
         <div className="text-center">
           <Music size={48} className="text-white/30 mx-auto mb-4" />
-          <h2 className={`text-white/60 text-xl mb-2 ${cardo.className}`}>
-            Hymn not found.
-          </h2>
+          <h2 className="text-white/60 text-xl mb-2">Hymn not found.</h2>
           <Link
             href="/"
             className="text-[#722b41] hover:text-[#C7884A] text-sm"
@@ -53,7 +44,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
   }
 
   return (
-    <div className={`min-h-screen bg-[#121212] relative ${cardo.className}`}>
+    <div className="min-h-screen bg-[#121212] relative">
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"

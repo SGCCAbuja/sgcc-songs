@@ -4,16 +4,9 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu, Music, Filter, ArrowRight } from "lucide-react";
-import { Cardo } from "next/font/google";
 
 import { hymns } from "@/app/data/hymns";
 import { Hymn } from "@/app/types/hymn";
-
-const cardo = Cardo({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
 
 export default function HymnCollectionPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +33,7 @@ export default function HymnCollectionPage() {
   }, [searchQuery, selectedAuthor]);
 
   return (
-    <div className={`min-h-screen bg-[#121212] relative ${cardo.className}`}>
+    <div className="min-h-screen bg-[#121212] relative">
       {/* Subtle radial gradient overlay */}
       <div
         className="absolute inset-0 pointer-events-none"

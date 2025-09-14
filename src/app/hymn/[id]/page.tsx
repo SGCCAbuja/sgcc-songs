@@ -38,13 +38,13 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
         <div className="text-center">
           <Music size={48} className="text-white/30 mx-auto mb-4" />
           <h2 className={`text-white/60 text-xl mb-2 ${cardo.className}`}>
-            Hymn not found
+            Hymn not found.
           </h2>
           <Link
             href="/"
             className="text-[#722b41] hover:text-[#C7884A] text-sm"
           >
-            Return to collection
+            Return to collection.
           </Link>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
             className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200"
           >
             <ArrowLeft size={20} />
-            <span className="text-sm">Back</span>
+            <span className="text-sm">Go Back</span>
           </Link>
           <div className="flex items-center space-x-2">
             <Image
@@ -81,7 +81,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
               height={20}
               className="inline-block mr-8"
             />
-            <div className="text-white font-semibold text-lg tracking-wide">
+            <div className="text-white font-semibold text-sm md:text-lg tracking-wide">
               SGCC Collection of Songs
             </div>
           </div>

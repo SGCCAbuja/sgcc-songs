@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Music, Heart, Share } from "lucide-react";
 
-import { shareLink } from "@/app/utils/share";
+import { formatSection } from "@/app/utils/formatSection";
+import { shareLink } from "@/app/utils/shareLink";
 import { hymns } from "@/app/data/hymns";
 
 interface HymnDetailPageProps {
@@ -18,13 +19,6 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
   const { id } = use(params);
   const hymnId = parseInt(id);
   const hymn = hymns.find((h) => h.id === hymnId);
-
-  const formatSectionTitle = (section: { type: string; number?: number }) => {
-    if (section.type === "verse") {
-      return `Verse ${section.number}`;
-    }
-    return section.type.charAt(0).toUpperCase() + section.type.slice(1);
-  };
 
   if (!hymn) {
     return (
@@ -123,7 +117,7 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
             {hymn.verses.map((section, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-[#722b41] font-semibold text-sm uppercase tracking-wide">
-                  {formatSectionTitle(section)}
+                  {formatSection(section)}
                 </h3>
                 <div className="text-white/90 text-xl leading-relaxed whitespace-pre-line pl-4 border-l border-white/20">
                   {section.content}

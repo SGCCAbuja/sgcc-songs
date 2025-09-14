@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, Music, Heart, Share } from "lucide-react";
 import { Cardo } from "next/font/google";
 
+import { shareLink } from "@/app/utils/share";
 import { hymns } from "@/app/data/hymns";
 
 const cardo = Cardo({
@@ -144,16 +145,15 @@ export default function HymnDetailPage({ params }: HymnDetailPageProps) {
         {/* Footer Actions */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-white/60 text-sm">
-            Share this hymn with others:
+            Share the link to this hymn with others:
           </div>
 
           <div className="flex items-center space-x-4">
-            <button className="px-6 py-2 border border-white/20 text-white text-sm rounded-full hover:border-white/40 hover:bg-white/10 transition-all duration-200">
-              Print Hymn
-            </button>
-
-            <button className="px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200">
-              Share Link to Hymn
+            <button
+              onClick={() => shareLink(hymn.title)}
+              className="px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200"
+            >
+              Share Hymn
             </button>
           </div>
         </div>

@@ -9,7 +9,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Only You are holy\nOnly You are worthy\nOnly You are wonderful\nFor there's no one else like You\nWho is faithful, ever true\nAll my love, my heart, my life is a testimony\nOnly You are holy",
+          "Only You are holy\nOnly You are worthy\nOnly You are wonderful",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "For there's no one else like You\nWho is faithful, ever true\nAll my love, my heart, my life is a testimony\nOnly You are holy",
       },
     ],
   },
@@ -22,7 +28,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "All the glory must be to the Lord\n\nFor He is worthy of our praise\n\nNo man on earth should give glory to himself\n\nAll the glory must be to the Lord",
+          "All the glory must be to the Lord\nFor He is worthy of our praise\nNo man on earth should give glory to himself\nAll the glory must be to the Lord",
       },
     ],
   },
@@ -36,39 +42,39 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Ascribe greatness to our God, the Rock\n\nHis work is perfect\n\nAnd all His ways are just\n\nAscribe greatness to our God, the Rock\n\nHis work is perfect\n\nAnd all His ways are just",
+          "Ascribe greatness to our God, the Rock\nHis work is perfect\nAnd all His ways are just\nAscribe greatness to our God, the Rock\nHis work is perfect\nAnd all His ways are just",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "A God of faithfulness and without injustice\n\nGood and upright is He\n\nA God of faithfulness and without injustice\n\nGood and upright is He",
+          "A God of faithfulness and without injustice\nGood and upright is He\nA God of faithfulness and without injustice\nGood and upright is He",
       },
     ],
   },
   {
     id: 4,
     title: "You Are Beautiful Beyond Description (I Stand In Awe)",
-    authors: ["Mark Altrogge"],
+    authors: ["Mark Altrogge", "Sovereign Grace Praise"],
     year: 1986,
     verses: [
       {
         type: "verse",
         number: 1,
         content:
-          "You are beautiful beyond description\n\nToo marvelous for words\n\nToo wonderful for comprehension\n\nLike nothing ever seen or heard\n\nWho can grasp Your infinite wisdom?\n\nWho can fathom the depth of Your love?\n\nYou are beautiful beyond description\n\nMajesty, enthroned above",
+          "You are beautiful beyond description\nToo marvelous for words\nToo wonderful for comprehension\nLike nothing ever seen or heard\nWho can grasp Your infinite wisdom?\nWho can fathom the depth of Your love?\nYou are beautiful beyond description\nMajesty, enthroned above",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "And I stand, I stand in awe of You\n\nI stand, I stand in awe of You\n\nHoly God, to whom all praise is due\n\nI stand in awe of You",
+          "And I stand, I stand in awe of You\nI stand, I stand in awe of You\nHoly God, to whom all praise is due\nI stand in awe of You",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "You are beautiful beyond description\n\nYet God crushed You for my sin\n\nIn agony and deep affliction\n\nCut off that I might enter in\n\nWho can grasp such tender compassion?\n\nWho can fathom this mercy so free?\n\nYou are beautiful beyond description\n\nLamb of God who died for me",
+          "You are beautiful beyond description\nYet God crushed You for my sin\nIn agony and deep affliction\nCut off that I might enter in\nWho can grasp such tender compassion?\nWho can fathom this mercy so free?\nYou are beautiful beyond description\nLamb of God who died for me",
       },
     ],
   },
@@ -82,26 +88,26 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Jesus name above all names\n\nBeautiful Savior glorious Lord\n\nEmmanuel God is with us\n\nBlessed Redeemer living Word",
+          "Jesus name above all names\nBeautiful Savior glorious Lord\nEmmanuel God is with us\nBlessed Redeemer living Word",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Jesus, loving Shepherd,\n\nVine of the branches, Son of God;\n\nPrince of Peace, Wonderful Counselor,\n\nLord of the universe, Light of the world.",
+          "Jesus, loving Shepherd,\nVine of the branches, Son of God;\nPrince of Peace, Wonderful Counselor,\nLord of the universe, Light of the world.",
       },
       {
         type: "verse",
         number: 3,
         content:
-          "Praise him, Lord above all lords,\n\nKing above all kings, God's only Son.\n\nThe Prince of Peace, Who by His Spirit\n\ncomes to live in us, Master and Friend.",
+          "Praise him, Lord above all lords,\nKing above all kings, God's only Son.\nThe Prince of Peace, Who by His Spirit\ncomes to live in us, Master and Friend.",
       },
     ],
   },
   {
     id: 6,
     title: "Because He Lives",
-    authors: ["Bill Gaither", "Gloria Gaither"],
+    authors: ["Bill & Gloria Gaither"],
     year: 2001,
     verses: [
       {
@@ -123,10 +129,20 @@ export const hymns = [
           "How sweet to hold a newborn baby,\nAnd feel the pride and joy he gives;\nBut greater still the calm assurance:\nThis child can face uncertain days because He Lives!",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 3,
         content:
           "And then one day, I'll cross the river,\nI'll fight life's final war with pain;\nAnd then, as death gives way to victory,\nI'll see the lights of glory and I'll know He lives!",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -140,25 +156,35 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Is there a heart o'erbound by sorrow\n\nIs there a life weighed down by care\n\nCome to the cross, each burden bearing\n\nAll your anxiety leave it there",
+          "Is there a heart o'erbound by sorrow\nIs there a life weighed down by care\nCome to the cross, each burden bearing\nAll your anxiety leave it there",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "All your anxiety, all your care\n\nBring to the mercy seat, leave it there\n\nNever a burden He cannot bear\n\nNever a friend like Jesus",
+          "All your anxiety, all your care\nBring to the mercy seat, leave it there\nNever a burden He cannot bear\nNever a friend like Jesus",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "No other Friend so willing to help you\n\nNo other Friend so quick to hear\n\nNo other place to leave your burden\n\nNo other one to hear your prayer",
+          "No other Friend so willing to help you\nNo other Friend so quick to hear\nNo other place to leave your burden\nNo other one to hear your prayer",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
       {
         type: "verse",
         number: 3,
         content:
-          "Come then at once, delay no longer\n\nHear His entreaty, kind and sweet\n\nYou need not fear a disappointment\n\nYou shall find peace at the mercy seat",
+          "Come then at once, delay no longer\nHear His entreaty, kind and sweet\nYou need not fear a disappointment\nYou shall find peace at the mercy seat",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -172,13 +198,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Blessed be the name of the Lord\n\nHe is worthy to be praised and adored\n\nSo we lift up holy hands in one accord",
+          "Blessed be the name of the Lord\nHe is worthy to be praised and adored\nSo we lift up holy hands in one accord",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Singing blessed be the name\n\nBlessed be the name\n\nBlessed be the name of the Lord",
+          "Singing blessed be the name\nBlessed be the name\nBlessed be the name of the Lord",
       },
     ],
   },
@@ -192,13 +218,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Down at Your feet, oh Lord\n\nIs the most high place\n\nIn Your presence, Lord\n\nI seek your face, seek your face",
+          "Down at Your feet, oh Lord\nIs the most high place\nIn Your presence, Lord\nI seek your face, seek your face",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "There is no higher calling, no greater honor\n\nThen to bow and kneel before Your throne\n\nI am amazed at Your glory, embraced by Your mercy\n\nOh Lord, I live to worship You",
+          "There is no higher calling, no greater honor\nThen to bow and kneel before Your throne\nI am amazed at Your glory, embraced by Your mercy\nOh Lord, I live to worship You",
       },
     ],
   },
@@ -211,13 +237,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Lord you are so good\n\nLord you are kind\n\nLord you are wonderful\n\nMy Lord you are excellent",
+          "Lord you are so good\nLord you are kind\nLord you are wonderful\nMy Lord you are excellent",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Excellent is your name\n\nExcellent is your power\n\nLord you are wonderful\n\nMy Lord you are excellent",
+          "Excellent is your name\nExcellent is your power\nLord you are wonderful\nMy Lord you are excellent",
       },
     ],
   },
@@ -230,7 +256,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "How excellent is your Name, o Lord\n\nHow excellent is your Name\n\nHow excellent is your Name\n\nHow excellent is your Name, o Lord",
+          "How excellent is your Name, o Lord\nHow excellent is your Name, o Lord",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "How excellent is your Name\nHow excellent is your Name\nHow excellent is your Name, o Lord",
       },
     ],
   },
@@ -244,7 +276,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "The steadfast love of the Lord never ceases\n\nHis mercies never have come to an end\n\nThey are new every morning\n\nNew every morning\n\nGreat is Thy faithfulness, O Lord\n\nGreat is Thy faithfulness",
+          "The steadfast love of the Lord never ceases\nHis mercies never have come to an end\nThey are new every morning\nNew every morning\nGreat is Thy faithfulness, O Lord\nGreat is Thy faithfulness",
       },
     ],
   },
@@ -258,13 +290,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Your steadfast love extends to the heavens\n\nYour faithfulness reaches to the clouds\n\nYour righteousness is like majestic mountains\n\nAnd your wisdom like the depths of the sea\n\nAnd you come to me",
+          "Your steadfast love extends to the heavens\nYour faithfulness reaches to the clouds\nYour righteousness is like majestic mountains\nAnd your wisdom like the depths of the sea\nAnd you come to me",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "Filling my heart with your loving kindness\n\nI find my peace in the shadow of your wings\n\nI eat my fill from the abundance of your household\n\nAnd I drink from the streams of rejoicing\n\nYou are my king",
+          "Filling my heart with your loving kindness\nI find my peace in the shadow of your wings\nI eat my fill from the abundance of your household\nAnd I drink from the streams of rejoicing\nYou are my king",
       },
     ],
   },
@@ -278,7 +310,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "I love you, Lord, And I lift my voice\n\nTo worship You, Oh, my soul, rejoice!\n\nTake joy my King, In what You hear\n\nLet it be a sweet, sweet sound\n\nIn Your ear",
+          "I love you, Lord, And I lift my voice\nTo worship You, Oh, my soul, rejoice!\nTake joy my King, In what You hear\nLet it be a sweet, sweet sound\nIn Your ear",
       },
     ],
   },
@@ -292,19 +324,19 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Worthy, You are worthy,\n\nKing of kings, Lord of lords,\n\nYou are worthy.\n\nWorthy, You are worthy,\n\nKing of kings, Lord of lords,\n\nI worship you.",
+          "Worthy, You are worthy,\nKing of kings, Lord of lords,\nYou are worthy.\nWorthy, You are worthy,\nKing of kings, Lord of lords,\nI worship you.",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Holy, You are Holy,\n\nKing of kings, Lord of lords,\n\nYou are Holy,\n\nHoly, You are Holy,\n\nKing of kings, Lord of lords,\n\nI worship you.",
+          "Holy, You are Holy,\nKing of kings, Lord of lords,\nYou are Holy,\nHoly, You are Holy,\nKing of kings, Lord of lords,\nI worship you.",
       },
       {
         type: "verse",
         number: 3,
         content:
-          "Jesus, You are Jesus,\n\nKing of kings, Lord of lords,\n\nYou are Jesus.\n\nJesus, You are Jesus,\n\nKing of Kings, Lord of lords,\n\nI worship you.",
+          "Jesus, You are Jesus,\nKing of kings, Lord of lords,\nYou are Jesus.\nJesus, You are Jesus,\nKing of Kings, Lord of lords,\nI worship you.",
       },
     ],
   },
@@ -318,7 +350,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "There is none holy as the LORD:\n\nThere is none beside Thee:\n\nNeither is there any rock like our God.\n\nThere is none holy as the LORD!",
+          "There is none holy as the LORD:\nThere is none beside Thee:\nNeither is there any rock like our God.\nThere is none holy as the LORD!",
       },
     ],
   },
@@ -332,7 +364,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Lord, you are\n\nMore precious than silver.\n\nLord, you are\n\nMore costly than gold.\n\nLord, you are\n\nMore beautiful than diamonds,\n\nAnd nothing I desire\n\nCompares with you.",
+          "Lord, you are\nMore precious than silver.\nLord, you are\nMore costly than gold.\nLord, you are\nMore beautiful than diamonds,\nAnd nothing I desire\nCompares with you.",
       },
     ],
   },
@@ -346,13 +378,18 @@ export const hymns = [
         type: "chorus",
         number: 1,
         content:
-          "There is none like You\n\nNo one else can touch my heart like you do\n\nAnd I can search for all eternity long\n\nAnd find, there is none like You",
+          "There is none like You\nNo one else can touch my heart like you do\nAnd I can search for all eternity long\nAnd find, there is none like You",
       },
       {
         type: "verse",
         number: 1,
         content:
-          "You mercy flows like river wide\n\nAnd healing comes from your hands\n\nSuffering children are safe in your arms\n\nThere is none like You",
+          "You mercy flows like river wide\nAnd healing comes from your hands\nSuffering children are safe in your arms\nThere is none like You",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -366,25 +403,30 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "My heart is steadfast of God\n\nAnd I will sing\n\nWith all my heart and soul\n\nMusic for the King\n\nAnd I will awake the dawn\n\nWith my praise to you O Lord",
+          "My heart is steadfast of God\nAnd I will sing\nWith all my heart and soul\nMusic for the King\nAnd I will awake the dawn\nWith my praise to you O Lord",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "How great is Your love\n\nSo much higher than the heavens\n\nWith faithfulness that reaches the sky\n\nHow great is Your love\n\nSo much higher than the heavens\n\nWith faithfulness that reaches the sky\n\nO how great is Your love",
+          "How great is Your love\nSo much higher than the heavens\nWith faithfulness that reaches the sky\nHow great is Your love\nSo much higher than the heavens\nWith faithfulness that reaches the sky\nO how great is Your love",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Praise the Lord O my soul\n\nAnd glory to the King\n\nForever You are robed with majesty\n\nWe come to you O Lord\n\nAnd Lay our praise at your feet",
+          "Praise the Lord O my soul\nAnd glory to the King\nForever You are robed with majesty\nWe come to you O Lord\nAnd Lay our praise at your feet",
+      },
+      {
+        type: "chorus",
+        number: 1,
+        content: "[Repeat Chorus]",
       },
       {
         type: "bridge",
         number: 1,
         content:
-          "Be exalted O God and let Your glory reign\n\nBe exalted O God and let Your glory reign\n\nLet it reign, Let it reign, Let it reign",
+          "Be exalted O God and let Your glory reign\nBe exalted O God and let Your glory reign\nLet it reign, Let it reign, Let it reign",
       },
     ],
   },
@@ -398,26 +440,39 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "When I look into Your holiness\n\nWhen I gaze into Your loveliness\n\nWhen all things that surround become shadows\n\nIn the light of You",
+          "When I look into Your holiness\nWhen I gaze into Your loveliness\nWhen all things that surround become shadows\nIn the light of You\nWhen I've found the joy of reaching Your heart\nWhen my will becomes enthroned in Your love\nWhen all things that surround become shadows\nIn the light of You\n",
       },
       {
-        type: "verse",
+        type: "chorus",
         number: 2,
         content:
-          "When I've found the joy of reaching Your heart\n\nWhen my will becomes enthroned in Your love\n\nWhen all things that surround become shadows\n\nIn the light of You\n\nI worship You\n\nI worship You\n\nThe reason I live is to worship You",
+          "I worship You\nI worship You\nThe reason I live is to worship You",
       },
     ],
   },
   {
     id: 21,
-    title: "Hear My Cry Oh Lord, Attend Unto My Prayer",
-    authors: [],
-    verses: [],
-    note: "Placeholder – lyrics not provided in original dataset.",
+    title: "Hear My Cry Oh Lord, Attend Unto My Prayer (Psalm 61)",
+    authors: ["Author Unknown"],
+    year: null,
+    verses: [
+      {
+        type: "verse",
+        number: 1,
+        content:
+          "Hear my cry, O Lord, attend unto my prayer;\nFrom the end of the earth will I cry unto You",
+      },
+      {
+        type: "chorus",
+        number: 1,
+        content:
+          "And when my heart is overwhelmed,\nPlease lead me to the rock that is higher than I\nThat is higher than I.",
+      },
+    ],
   },
   {
     id: 22,
-    title: "As The Deer Panteth For The Water",
+    title: "As The Deer Panteth For The Water (Psalm 42)",
     authors: ["Martin Nystrom"],
     year: 1984,
     verses: [
@@ -437,7 +492,12 @@ export const hymns = [
         type: "verse",
         number: 2,
         content:
-          "You’re my Friend and You are my Brother\nEven though You are a King\nI love You more than any other\nSo much more than anything",
+          "You're my Friend and You are my Brother\nEven though You are a King\nI love You more than any other\nSo much more than anything",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
       {
         type: "verse",
@@ -445,21 +505,68 @@ export const hymns = [
         content:
           "I want You more than gold or silver\nOnly You can satisfy\nYou alone are the real joy-giver\nAnd the apple of my eye",
       },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
     id: 23,
     title: "Here We Are, Lifting Our Hands To You",
-    authors: [],
-    verses: [],
-    note: "Placeholder – not found in original dataset.",
+    authors: ["Claire Cloninger", "Don Moen"],
+    year: 1989,
+    verses: [
+      {
+        type: "chorus",
+        number: 1,
+        content:
+          "And here we are lifting our hands to you\nHere we are giving you thanks for all you do\nAnd as we praise and worship your Holy name\nYou are here dwelling within our praise",
+      },
+      {
+        type: "verse",
+        number: 1,
+        content:
+          "For every answered prayer\nOh yeah, for always being there\nFor love that hears us when we call\nFor arms that lift us when we fall, oh yeah\nOh, you have always been\nRight beside us, leading us all along the way\nAnd we made it through\nBecause of you",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "For days we cannot see (for days we cannot see)\nFor all that's yet to be (so much is yet to be)\nThe trials we may have to face\nWhen we'll be leaning on your grace, oh yes\nIt will be your strength, that saves us\nYour love that makes us strong\nAnd through it all (through it all)\nWe'll sing this song, oh",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
+      },
+    ],
   },
   {
     id: 24,
     title: "Have Your Way, Holy Spirit Fill Our Hearts",
-    authors: [],
-    verses: [],
-    note: "Placeholder – not found in original dataset.",
+    authors: ["Don Moen"],
+    year: 2001,
+    verses: [
+      {
+        type: "verse",
+        number: 1,
+        content:
+          "Have your way, have your way\nHoly Spirit, fill our hearts, and have your way",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "As we wait (we wait on you)\nAnd as we pray (we pray to you)\nSpeak your word into our hearts, and have your way",
+      },
+    ],
   },
   {
     id: 25,
@@ -572,6 +679,11 @@ export const hymns = [
           "I love Your voice\nYou have led me through the fire\nIn darkest night You are close like no other\nI've known You as a Father\nI've known You as a Friend\nAnd I have lived in the goodness of God, yeah",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
         content:
@@ -619,13 +731,7 @@ export const hymns = [
         type: "chorus",
         number: 3,
         content:
-          "God of wonders beyond our galaxy\nYou are holy holy\nPrecious Lord reveal Your heart to me\nFather hold me hold me",
-      },
-      {
-        type: "ending",
-        number: 1,
-        content:
-          "Hallelujah! To the Lord of heaven and earth\nHallelujah! To the Lord of heaven and earth",
+          "God of wonders beyond our galaxy\nYou are holy holy\nPrecious Lord reveal Your heart to me\nFather hold me hold me\nHallelujah! To the Lord of heaven and earth\nHallelujah! To the Lord of heaven and earth",
       },
     ],
   },
@@ -633,7 +739,7 @@ export const hymns = [
     id: 31,
     title: "I Will Sing of the Mercies of the Lord Forever",
     authors: ["James Henry Fillmore"],
-    year: "1849-1936",
+    year: null,
     verses: [
       {
         type: "verse",
@@ -642,14 +748,14 @@ export const hymns = [
           "I will sing of the mercies of the Lord forever\nI will sing, I will sing\nWhat a mercy that I am in the church forever\nI will sing of the mercies of the Lord",
       },
       {
-        type: "chorus",
-        number: 1,
+        type: "verse",
+        number: 2,
         content:
           "With my mouth will I make known\nThy faithfulness, Thy faithfulness\nWith my mouth will I make known\nThy faithfulness to all generations",
       },
       {
         type: "verse",
-        number: 2,
+        number: 3,
         content:
           "I will sing of the mercies of the Lord forever\nI will sing, I will sing\nWhat a mercy that I am in the church forever\nI will sing of the mercies of the Lord",
       },
@@ -679,6 +785,11 @@ export const hymns = [
         content:
           "Here I am humbled by the love that You give\nForgiven so that I can forgive\nSo here I stand\nKnowing that I'm Your desire\nSanctified by glory and fire\nAnd now I've found the greatest love of all is mine\nSince You laid down Your life\nThe greatest sacrifice",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
@@ -687,13 +798,13 @@ export const hymns = [
     authors: ["Traditional"],
     verses: [
       {
-        type: "chorus",
+        type: "verse",
         number: 1,
         content:
           "Thank you, thank you Lord\nThank you, Lord, thank you Lord\nFor everything you have done",
       },
       {
-        type: "chorus",
+        type: "verse",
         number: 2,
         content:
           "Thank you, thank you Lord\nThank you Lord, thank you Lord\nFor everything you have done",
@@ -706,7 +817,7 @@ export const hymns = [
     authors: ["Traditional"],
     verses: [
       {
-        type: "chorus",
+        type: "verse",
         number: 1,
         content:
           "We are grateful O Lord\nWe are grateful O Lord\nFor all you have done for us\nWe are grateful O Lord",
@@ -719,7 +830,7 @@ export const hymns = [
     authors: ["Traditional"],
     verses: [
       {
-        type: "chorus",
+        type: "verse",
         number: 1,
         content:
           "Thanks, thanks, we give you thanks\nFor all you have done\nWe are so blessed\nOur souls have found rest\nO Lord, we give you thanks",
@@ -738,8 +849,8 @@ export const hymns = [
         content: "Jesus, Jesus,\nHoly and anointed one, Jesus.",
       },
       {
-        type: "chorus",
-        number: 1,
+        type: "verse",
+        number: 2,
         content:
           "Your name is like honey on my lips,\nYour spirit like water to my soul\nYour word is a lamp unto my feet,\nJesus I love You, I love You.",
       },
@@ -769,30 +880,24 @@ export const hymns = [
         content:
           "Taking my cross my sin my shame\nRaising again I praise Your name\nYou are my all in all\nWhen I fall down You pick me up\nWhen I run dry You fill my cup\nYou are my all in all",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
     id: 38,
     title: "Oh Lord, Your Tenderness",
-    authors: ["Graham Kendrick"],
-    year: 1986,
+    authors: ["Traditional"],
+    year: null,
     verses: [
       {
         type: "verse",
         number: 1,
         content:
-          "O Lord Your Tenderness,\nMelting all my bitterness,\nO Lord, I receive Your love.",
-      },
-      {
-        type: "verse",
-        number: 2,
-        content:
-          "O Lord, Your loveliness,\nChanging all my ugliness,\nO Lord, I receive Your love.",
-      },
-      {
-        type: "chorus",
-        number: 1,
-        content: "O Lord, I receive Your love,\nO Lord, I receive Your love.",
+          "O Lord Your Tenderness,\nMelting all my bitterness,\nO Lord, I receive Your love.\nO Lord, Your loveliness,\nChanging all my ugliness,\nO Lord, I receive Your love.\nO Lord, I receive Your love,\nO Lord, I receive Your love.",
       },
     ],
   },
@@ -838,7 +943,7 @@ export const hymns = [
         type: "outro",
         number: 1,
         content:
-          "For Your name is Holy\nHoly Lord\nFor Your name is Holy\nHoly Lord",
+          "For Your name is Holy Holy Lord\nFor Your name is Holy Holy Lord",
       },
     ],
   },
@@ -852,28 +957,34 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "In Your presence I am content\nIn Your presence I am content\nIn Your presence there is light\nExpressions of Your life\nRevelations of Your power and might\nIn Your presence I can bring\nMy love song offering\nI'm in the presence of my King",
+          "In Your presence I am content\nIn Your presence I am content\nIn Your presence there is light\nExpressions of Your life",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "Revelations of Your power and might\nIn Your presence I can bring\nMy love song offering\nI'm in the presence of my King",
       },
     ],
   },
   {
     id: 42,
-    title: "Who Is Like Unto Thee",
-    authors: ["July Horner Montemayor"],
-    year: 1975,
+    title: "Who Is Like Unto Thee (Based on Exodus 15:11)",
+    authors: ["Author Unknown"],
+    year: null,
     verses: [
       {
         type: "verse",
         number: 1,
         content:
-          "Who is like unto thee, O Lord?\n\nWho is like unto thee, O Lord?\n\nAmong the gods, who is like thee?\n\nGlorious in holiness, fearful in praises,\n\nDoing wonders, Alleluia!",
+          "Who is like unto thee, O Lord?\nWho is like unto thee, O Lord?\nAmong the gods, who is like thee?\nGlorious in holiness, fearful in praises,\nDoing wonders, Alleluia!",
       },
     ],
   },
   {
     id: 43,
     title: "What a Mighty God We Serve",
-    authors: ["Traditional"],
+    authors: ["Author Unknown"],
     verses: [
       {
         type: "chorus",
@@ -885,8 +996,9 @@ export const hymns = [
   },
   {
     id: 44,
-    title: "Our Father, Hear Us from Heaven",
-    authors: ["Traditional"],
+    title: "Our Father",
+    authors: ["Don Moen", "Integrity's Hosanna! Music"],
+    year: 2001,
     verses: [
       {
         type: "verse",
@@ -907,17 +1019,28 @@ export const hymns = [
           "Hear our song, as it rises to heaven\nMay your glory fill the earth as the waters cover the sea\nSee our hearts and remove anything\nThat is standing in the way\nOf coming to You today!",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
         content:
-          "And though we are few\nWe're surrounded by many who have crossed that river before\nAnd this is the song we'll be singing forever\nHoly is the Lord",
+          "And though we are few\nWe're surrounded by many who have crossed that river before\nAnd this is the song we'll be singing forever\nHoly is the Lord\n\nHear o u r prayer\nWe are your children and we've gathered here today\nWe've gathered here to pray\nHear our cry\nLord we need your mercy and we need you grace today\nHear us as we pray",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
   {
     id: 45,
     title: "Hallelujah to the Lamb",
-    authors: ["Traditional"],
+    authors: ["Don Moen"],
+    year: 1997,
     verses: [
       {
         type: "verse",
@@ -937,11 +1060,27 @@ export const hymns = [
         content:
           "Every knee shall bow (yes)\nAnd every tongue confess that You are Lord of all\nJesus Christ, Lamb of God",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "bridge",
+        number: 2,
+        content:
+          "Every knee shall bow\nEvery tongue confess that you are Lord of all",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
     id: 46,
-    title: "He Is Lord, He Is Lord",
+    title: "He Is Lord, He Is Lord Amen!",
     authors: ["Steve Vest"],
     year: 1969,
     verses: [
@@ -962,7 +1101,7 @@ export const hymns = [
   {
     id: 47,
     title: "My Soul Doth Magnify the Lord",
-    authors: ["Traditional"],
+    authors: ["Author Unknown"],
     verses: [
       {
         type: "verse",
@@ -975,7 +1114,7 @@ export const hymns = [
   {
     id: 48,
     title: "Unto You",
-    authors: ["Bob Fitts"],
+    authors: ["Bob Fitts", "Integrity's Hosanna! Music"],
     year: 1989,
     verses: [
       {
@@ -1002,13 +1141,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "I see the Lord, I see the Lord\nExalted high upon the worship\nOf the people of the earth\nI see the Lord, I see the Lord\nMy eyes have seen the King\nThe Lamb upon the throne\nWho reigns forever more",
-      },
-      {
-        type: "verse",
-        number: 2,
-        content:
-          'The train of his robe\nFills the temple\nA cloud of heavenly worshipers\nSurrounding His throne\nWe join with them now crying\n"Holy, holy is the Lamb\nThe Lamb alone"',
+          "I see the Lord, I see the Lord\nExalted high upon the worship\nOf the people of the earth\nI see the Lord, I see the Lord\nMy eyes have seen the King\nThe Lamb upon the throne\nWho reigns forever more\n\nThe train of his robe\nFills the temple\nA cloud of heavenly worshipers\nSurrounding His throne\nWe join with them now crying\n'Holy, holy is the Lamb\nThe Lamb alone'",
       },
     ],
   },
@@ -1022,19 +1155,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "I will come into Your presence, Lord\nWith the sacrifice of praise\nWith a song I will exalt You, Lord\nBlessed be Your holy name",
-      },
-      {
-        type: "verse",
-        number: 2,
-        content:
-          "I will give You all the glory\nYou delivered me from shame\nI′m created in Your righteousness\nBlessed be Your holy name",
+          "I will come into Your presence, Lord\nWith the sacrifice of praise\nWith a song I will exalt You, Lord\nBlessed be Your holy name\n\nI will give You all the glory\nYou delivered me from shame\nI′m created in Your righteousness\nBlessed be Your holy name",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "Lift Him up\nHis name be lifted higher\nLift Him up\nExalt His holy name",
+          "Lift Him up\nHis name be lifted higher\nLift Him up\nExalt His holy name\nThe Lamb alone",
       },
     ],
   },
@@ -1048,13 +1175,7 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "Holy holy Lord, You're worthy\nAnd I'm honored to sing Your praise\nKing of glory God Almighty\nHallowed be Your name",
-      },
-      {
-        type: "verse",
-        number: 2,
-        content:
-          "All creation every nation\nHas its being by Your Word\nAs it is done up in Heaven\nLet it be done here on earth\nLet it be done here on earth",
+          "Holy holy Lord, You're worthy\nAnd I'm honored to sing Your praise\nKing of glory God Almighty\nHallowed be Your name\n\nAll creation every nation\nHas its being by Your Word\nAs it is done up in Heaven\nLet it be done here on earth\nLet it be done here on earth",
       },
       {
         type: "chorus",
@@ -1083,10 +1204,25 @@ export const hymns = [
           "In the middle of the conflict\nIn the valleys of our lives\nWe will lift up songs of worship\nFor Your goodness cannot be denied",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 2,
         content:
           "For we know that every problem\nIs a tool in Your own hands\nTo refine us for Your glory\nMake us willing and able to stand",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "outro",
+        number: 2,
+        content: "At all times\nIn everything\nWe give you thanks",
       },
     ],
   },
@@ -1106,7 +1242,7 @@ export const hymns = [
         type: "chorus",
         number: 1,
         content:
-          "With a grateful heart\nWith a song of praise\nWith an outstretched arm\nI will bless Your name\nThank You Lord\nI just wanna thank You Lord\nThank You Lord\nI just wanna thank You Lord\nThank You Lord",
+          "With a grateful heart\nWith a song of praise\nWith an outstretched arm\nI will bless Your name\n\nThank You Lord\nI just wanna thank You Lord\nThank You Lord\nI just wanna thank You Lord\nThank You Lord",
       },
       {
         type: "verse",
@@ -1114,11 +1250,16 @@ export const hymns = [
         content:
           "For all You've done in my life\nYou took my darkness and gave me Your light\nThank You Lord\nThank You Lord\nYou took my sin and my shame\nYou took my sickness and healed all my pain\nThank You Lord\nThank You Lord",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
     id: 54,
-    title: "Be It Unto Me According to Your Word",
+    title: "Be It Unto Me",
     authors: ["Don Moen"],
     year: 1995,
     verses: [
@@ -1135,10 +1276,20 @@ export const hymns = [
           "You promised Your blood will deliver\nLord, we believe it's true\nYou promised us joy like a river\nLord, we receive it from You\nThese things You have spoken\nAnd You're bringing to pass\nThis world's disappearing\nBut Your word will last",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 2,
         content:
           "You promised to carry our sorrows\nLord, we believe it's true\nYou promised unending tomorrows\nLord, we receive them from You\nYou'll be our provider\nIn Your word it's revealed\nAnd by the stripes that You bore\nLord, we have been healed",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1167,17 +1318,27 @@ export const hymns = [
           "Jesus my Redeemer,\nName above all names,\nPrecious Lamb of God,\nMessiah, O for sinners slain.",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 3,
         content:
-          "When I stand in glory\nI will see His face,\nAnd there I’ll serve\nMy King forever,\nIn that holy place.",
+          "When I stand in glory\nI will see His face,\nAnd there I'll serve\nMy King forever,\nIn that holy place.",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
   {
     id: 56,
-    title: "Cast Thy Burdens Upon the Lord",
-    authors: ["Psalm 55:22"],
+    title: "Cast Thy Burdens Upon the Lord (Psalms 55:22)",
+    authors: ["Author Unknown"],
     verses: [
       {
         type: "verse",
@@ -1197,6 +1358,7 @@ export const hymns = [
     id: 57,
     title: "Let the Weight of Your Glory Fall",
     authors: ["Paul Wilbur"],
+    year: 2002,
     verses: [
       {
         type: "verse",
@@ -1216,6 +1378,11 @@ export const hymns = [
         content:
           "We do not seek Your hand\nWe only seek Your face\nWe want to know You\nWe want to see You\nReveal Your glory in this place",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
@@ -1224,10 +1391,10 @@ export const hymns = [
     authors: ["Traditional"],
     verses: [
       {
-        type: "chorus",
+        type: "verse",
         number: 1,
         content:
-          "Be Thou exalted, O God,\nAbove the heavens:\nBe Thou exalted, O God,\nAbove the heavens:\nLet Thy glory,\nBe above all the earth!\nLet Thy glory,\nBe above all the earth!",
+          "Be Thou exalted, O God,\nAbove the heavens:\nBe Thou exalted, O God,\nAbove the heavens:\n\nLet Thy glory,\nBe above all the earth!\nLet Thy glory,\nBe above all the earth!",
       },
     ],
   },
@@ -1244,8 +1411,8 @@ export const hymns = [
           "You are here in our midst.\nHow we've waited for moments like this.\nHave Your way in this place.\nHoly Spirit come do as you wish.\nWe are changed as You move in our midst.",
       },
       {
-        type: "chorus",
-        number: 1,
+        type: "verse",
+        number: 2,
         content:
           "You are here among us for we have gathered in Your Name.\nWe can feel Your presence in this place.\nYou are here among us.\nYou are enthroned upon Your praise.\nYou are here, here to heal and here to save.",
       },
@@ -1275,6 +1442,11 @@ export const hymns = [
         content:
           "Father of mercy be exalted\nMay Jesus' name be lifted high\nFor the sacrifice of love has won my pardon\nAnd His resurrection power gives me life",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
@@ -1293,7 +1465,7 @@ export const hymns = [
   },
   {
     id: 62,
-    title: "You Are Alpha and Omega",
+    title: "We Give You All The Glory (You Are Alpha)",
     authors: ["Israel Houghton"],
     year: 2005,
     verses: [
@@ -1301,7 +1473,7 @@ export const hymns = [
         type: "chorus",
         number: 1,
         content:
-          "You are Alpha and Omega\nWe worship You our Lord\nYou are worthy to be praised\nWe give You all the glory\nWe worship You our Lord\nYou are worthy to be praised",
+          "You are Alpha and Omega\nWe worship You our Lord\nYou are worthy to be praised\n\nWe give You all the glory\nWe worship You our Lord\nYou are worthy to be praised",
       },
     ],
   },
@@ -1309,6 +1481,7 @@ export const hymns = [
     id: 63,
     title: "Ancient of Days",
     authors: ["Ron Kenoly"],
+    year: 1992,
     verses: [
       {
         type: "verse",
@@ -1323,10 +1496,25 @@ export const hymns = [
           "Every tongue in heaven and earth\nShall declare Your glory\nEvery knee shall bow at Your throne\nIn worship\nYou will be exalted, oh God\nAnd Your kingdom shall not pass away\nOh ancient of days",
       },
       {
+        type: "verse",
+        number: 2,
+        content: "[Repeat Verse]",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
         content:
           "Your kingdom shall reign over all the earth (sing unto)\nSing unto the ancient of days\nFor none can compare to Your matchless worth (sing)\nSing unto the ancient of days",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1334,6 +1522,7 @@ export const hymns = [
     id: 64,
     title: "Ancient of Days",
     authors: ["CityAlight"],
+    year: 2018,
     verses: [
       {
         type: "verse",
@@ -1354,10 +1543,20 @@ export const hymns = [
           "Though the dread of night overwhelms my soul\nHe is here with me, I am not alone\nOh, His love is sure, and He knows my name\nFor my God is the Ancient of Days",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 3,
         content:
           "Though I may not see what the future brings\nI will watch and wait for the Saviour King\nThen my joy complete, standing face to face\nIn the presence of the Ancient of Days",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1383,7 +1582,7 @@ export const hymns = [
   },
   {
     id: 66,
-    title: "Lord Most High, Be Magnified",
+    title: "Lord Most High",
     authors: ["Bob Fitts", "Integrity's Hosanna! Music"],
     year: 1996,
     verses: [
@@ -1391,13 +1590,13 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "From the ends of the earth (from the ends of the earth)\nFrom the depths of the sea (from the depths of the sea)\nFrom the heights of the heavens (from the heights of the heavens)\nYour name we praise\nFrom the hearts of the weak (from the hearts of the weak)\nFrom the shouts of the strong (from the shouts of the strong)\nFrom the lips of all people (from the lips of all people)\nThis song we raise Lord",
+          "From the ends of the earth (from the ends of the earth)\nFrom the depths of the sea (from the depths of the sea)\nFrom the heights of the heavens (from the heights of the heavens)\nYour name we praise\n\nFrom the hearts of the weak (from the hearts of the weak)\nFrom the shouts of the strong (from the shouts of the strong)\nFrom the lips of all people (from the lips of all people)\nThis song we raise Lord",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "Throughout the endless ages\nYou will be crowned with praises Lord\nMost High (Most High)\nExalted in every nation\nSovereign of all creation Lord\nMost High\nBe magnified",
+          "Throughout the endless ages\nYou will be crowned with praises Lord\nMost High (Most High)\n\nExalted in every nation\nSovereign of all creation Lord\nMost High\nBe magnified",
       },
     ],
   },
@@ -1423,9 +1622,9 @@ export const hymns = [
   },
   {
     id: 68,
-    title: "Majesty",
-    authors: ["Jack Hayford"],
-    year: 1987,
+    title: "Everytime We Are Gathered",
+    authors: ["Maranatha Music"],
+    year: 1995,
     verses: [
       {
         type: "verse",
@@ -1445,7 +1644,7 @@ export const hymns = [
     id: 69,
     title: "As We Worship You",
     authors: ["Don Moen", "Integrity's Hosanna! Music"],
-    year: 2001,
+    year: 1996,
     verses: [
       {
         type: "verse",
@@ -1465,6 +1664,11 @@ export const hymns = [
         content:
           "As we worship You\nLet all the nations hear our song\nSong of Jesus and his blood that proved His love for all\nAs we worship You\nMay all the lost and broken come\nMay they hear Your still small voice call out their names each one",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
@@ -1477,19 +1681,24 @@ export const hymns = [
         type: "verse",
         number: 1,
         content:
-          "We’re here because of grace\nA part of Your great plan\nWe have come to seek Your face\nNot the wonders of Your hand\nAnd yes we need Your touch\nBut You’ve given us so much\nThat we just want to thank You\nFor all You’ve done for us",
+          "We're here because of grace\nA part of Your great plan\nWe have come to seek Your face\nNot the wonders of Your hand\nAnd yes we need Your touch\nBut You’ve given us so much\nThat we just want to thank You\nFor all You’ve done for us",
       },
       {
         type: "chorus",
         number: 1,
         content:
-          "We’ve come to bless Your name\nKing of kings and Lord of lords\nWe’ve come to give You praise\nYou are the One that we adore\nO Lord cleanse our hearts with fire\nAnd fill us with desire\nFor Your courts\nFor Your presence in our lives",
+          "We've come to bless Your name\nKing of kings and Lord of lords\nWe’ve come to give You praise\nYou are the One that we adore\nO Lord cleanse our hearts with fire\nAnd fill us with desire\nFor Your courts\nFor Your presence in our lives",
       },
       {
         type: "verse",
         number: 2,
         content:
-          "Lord You’ve made a way\nBecause of Your great love\nAnd our hearts are filled\nWith praise\nFor all that You have done\nThere is none like You\nSo faithful and so true\nAnd we just want to thank You\nFor all You’ve brought us through",
+          "Lord You've made a way\nBecause of Your great love\nAnd our hearts are filled\nWith praise\nFor all that You have done\nThere is none like You\nSo faithful and so true\nAnd we just want to thank You\nFor all You’ve brought us through",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1511,6 +1720,7 @@ export const hymns = [
     id: 72,
     title: "We Delight",
     authors: ["Caedmon's Call"],
+    year: 2001,
     verses: [
       {
         type: "chorus",
@@ -1531,10 +1741,20 @@ export const hymns = [
           "We're delivered by blood that flows from the tree\nDraws near to you vessels of your mercy\nFor the invention of man, glorious trinity",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 3,
         content:
           "We will lift our eyes to the cloud and the flame\nLord you guide our steps and restore us again\nThe nations of man will rejoice in the God of the wilderness",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1563,17 +1783,27 @@ export const hymns = [
           "Only there my hope is clinging\nTrusting Christ and Christ alone\nKnowing full I stand forgiven\nThrough Thy merit not my own\nAnd I know that You will keep me\nNone can separate Your love\nI employ the power that saved me\nTo the Savior's feet I come",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
         content:
           "I find my rest\nI find my peace\nI find my hope\nI'm finding everything I need\nI find my rest (only there)\nI find my peace (only there)\nI find my hope (only there)\nI'm finding everything I need",
+      },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
     ],
   },
   {
     id: 74,
     title: "Magnificent, Marvelous, Matchless Love",
-    authors: ["Keith Getty", "Kristyn Getty"],
+    authors: ["Keith & Kristyn Getty"],
     year: 2018,
     verses: [
       {
@@ -1603,15 +1833,14 @@ export const hymns = [
       {
         type: "chorus",
         number: 2,
-        content:
-          "United in Your resurrection\nYou lift us to infinite heights\nCould anything sever or take us from\nMagnificent, marvelous, matchless love",
+        content: "[Repeat Chorus]",
       },
     ],
   },
   {
     id: 75,
     title: "Come Behold the Wondrous Mystery",
-    authors: ["Keith Getty", "Kristyn Getty", "Matt Boswell", "Matt Papa"],
+    authors: ["Keith & Kristyn Getty", "Matt Boswell", "Matt Papa"],
     year: 2020,
     verses: [
       {
@@ -1644,6 +1873,7 @@ export const hymns = [
     id: 76,
     title: "Day After Day",
     authors: ["CityAlight"],
+    year: 2023,
     verses: [
       {
         type: "verse",
@@ -1664,16 +1894,20 @@ export const hymns = [
           "In the evening as I rest\nI recall Your faithfulness\nHow You never left my side\nFrom the morning to the night\nNow until the dawning sun\nBe the light that leads me on\nI can face it with this hope",
       },
       {
-        type: "bridge",
-        number: 1,
-        content:
-          "Always before me\nAnd always beside me\nMy Shepherd is always close\nMorning to evening\nEach day that I'm given\nMy Shepherd is always close",
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
       },
       {
         type: "verse",
         number: 3,
         content:
           'For tomorrow, this I pray\n"Father help me live Your way"\nEvery breath and every word\nFor the glory of the Lord\nIf the day should test my faith\nOr fill my heart with songs of praise\nI can face it with this hope\nJesus won\'t forget His own',
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1692,7 +1926,7 @@ export const hymns = [
         type: "pre-chorus",
         number: 1,
         content:
-          "Your name is the highest\nYour name is the greatest\nYour name stands above them all\nAll thrones and dominions\nAll powers and positions\nYour name stands above them all",
+          "Your name is the highest\nYour name is the greatest\nYour name stands above them all\n\nAll thrones and dominions\nAll powers and positions\nYour name stands above them all",
       },
       {
         type: "chorus",
@@ -1711,6 +1945,16 @@ export const hymns = [
         number: 2,
         content:
           "Hear your people sing, ho-holy\nTo the King of kings, ho-holy\nYou will always be, ho-holy\nHoly forever",
+      },
+      {
+        type: "pre-chorus",
+        number: 2,
+        content: "[Repeat Pre-Chorus]",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1739,15 +1983,30 @@ export const hymns = [
           "You're the only God whose power none can contend\nYou're the only God whose name and praise will never end\nYou're the only God who's worthy of everything we can give\nYou are God and that's just the way it is",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
+        content: "Unchangeable, unshakable, unstoppable\nThat's what You are",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "outro",
+        number: 2,
         content: "Unchangeable, unshakable, unstoppable\nThat's what You are",
       },
     ],
   },
   {
     id: 79,
-    title: "My Savior’s Love",
+    title: "My Savior's Love",
     authors: ["Matt Boswell", "Matt Papa"],
     year: 2019,
     verses: [
@@ -1770,10 +2029,20 @@ export const hymns = [
           "What tune could carry on its wings\nThe beauty of that final breath\nWhat words dare paint the awesome scene\nWhen God stood in the stead of man\nWhen Jesus Christ the radiant One\nTook on the shadows of our hate\nThen rose again just as the sun",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "verse",
         number: 3,
         content:
           "And when in death this tongue is stilled\nMy song of life has reached the end\nThough as a flower I may wilt\nThis everlasting truth will stand\nNo death or life could separate\nMe from the love of Christ my Lord\nThis hope is sure from age to age\nMy song will be forevermore",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1802,10 +2071,20 @@ export const hymns = [
           "There's a place where sin and shame\nAre powerless\nWhen my heart has peace with God\nAnd forgiveness\nWhere all the love I've ever found\nComes like a flood\nComes flowing down",
       },
       {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
         type: "bridge",
         number: 1,
         content:
           "Here my hope is found\nHere on holy ground\nHere I bow down\nHere I bow down\nHere arms open wide\nHere You save my life\nHere I bow down\nHere I bow",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
       },
     ],
   },
@@ -1821,6 +2100,33 @@ export const hymns = [
         content:
           "I believe in Christ, risen from the dead\nHe now reigns victorious, His kingdom knows no end\nThrough His resurrection death has lost its hold\nI know on that final day, I'll rise as Jesus rose",
       },
+      {
+        type: "chorus",
+        number: 2,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "verse",
+        number: 2,
+        content:
+          "What a blessed hope, though now tired and worn\nWe will spend eternity around our Saviour's throne\nThough we grieve our losses, we grieve not in vain\nFor we know our crown of glory waits beyond the grave",
+      },
+      {
+        type: "chorus",
+        number: 3,
+        content: "[Repeat Chorus]",
+      },
+      {
+        type: "bridge",
+        number: 1,
+        content:
+          "Hallelujah, what a day it will be\nFor at home with You, my joy is complete\nAs I run into Your arms open wide, I will see\nMy Father who is waiting tor me\nHallelujah, what a day it will be\nFor at home with You, my joy is complete\nAs I run into Your arms open wide, I will see\nMy Father who is waiting for me\nMy Father who is waiting for me",
+      },
+      {
+        type: "chorus",
+        number: 4,
+        content: "[Repeat Chorus]",
+      },
     ],
   },
   {
@@ -1830,7 +2136,7 @@ export const hymns = [
     year: 1985,
     verses: [
       {
-        type: "chorus",
+        type: "verse",
         number: 1,
         content:
           "Let there be glory and honor and praises\nGlory and honor to Jesus\nGlory and honor\nGlory and honor to Him",

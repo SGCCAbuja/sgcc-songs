@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://songs.sgcc.ng"),
+  metadataBase: new URL("https://sgcc-songs.netlify.app"),
   title: {
     default: "SGCC Collection of Songs",
     template: "%s | SGCC Collection of Songs",

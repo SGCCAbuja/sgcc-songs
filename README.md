@@ -4,6 +4,8 @@
 
 A collection of hymns sang at Sovereign Grace Community Church, Abuja.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d1bf82a6-b4cb-41fb-baba-2f50a290773c/deploy-status)](https://app.netlify.com/projects/sgcc-songs/deploys)
+
 </div>
 
 ---

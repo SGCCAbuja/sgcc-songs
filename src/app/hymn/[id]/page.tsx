@@ -7,13 +7,13 @@ import { ArrowLeft, Music, Heart, Share } from "lucide-react";
 
 import { formatSection } from "@/app/utils/formatSection";
 import { shareLink } from "@/app/utils/shareLink";
-import { hymns } from "@/app/data/hymns";
+import hymns from "@/app/data/hymns.json";
 
-interface HymnDetailPageProps {
+interface HymContentProps {
   params: Promise<{ id: string }>;
 }
 
-export default function HymnDetailPage({ params }: HymnDetailPageProps) {
+export default function HymContent({ params }: HymContentProps) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const { id } = use(params);

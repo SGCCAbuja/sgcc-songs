@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search, Menu, Music, Filter, ArrowRight } from "lucide-react";
 
-import { hymns } from "@/app/data/hymns";
+import hymns from "@/app/data/hymns.json";
 import { Hymn } from "@/app/types/hymn";
 
 export default function HymnCollectionPage() {

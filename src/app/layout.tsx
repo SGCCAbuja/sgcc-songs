@@ -3,8 +3,6 @@ import Script from "next/script";
 import { Cardo } from "next/font/google";
 import "./globals.css";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
-
 const cardo = Cardo({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -78,7 +76,7 @@ export default function RootLayout({
 
         {/* Google Analytics Scripts */}
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-QZZ04ZGDJ7`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -86,7 +84,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){window.dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', 'G-QZZ04ZGDJ7');
           `}
         </Script>
       </body>

@@ -4,13 +4,6 @@ const hymns = require('../app/data/hymns.json');
 
 const baseUrl = 'https://songs.sgcc.ng';
 
-function slugify(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '');
-}
-
 const staticPages = [
   { path: '', changefreq: 'yearly' },
 ];
@@ -21,9 +14,8 @@ const urls = staticPages.map(page => ({
 }));
 
 hymns.forEach(hymn => {
-  const slug = slugify(hymn.title);
   urls.push({
-    loc: `${baseUrl}/hymns/${slug}`,
+    loc: `${baseUrl}/hymn/${hymn.id}`,
     changefreq: 'weekly',
   });
 });

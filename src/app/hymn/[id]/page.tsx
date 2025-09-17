@@ -38,36 +38,27 @@ export default function HymContent({ params }: HymContentProps) {
   }
 
   return (
-    <div className="min-h-screen bg-[#121212] relative">
-      {/* Subtle radial gradient overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.03) 0%, transparent 50%)",
-        }}
-      />
-
+    <div className="min-h-screen relative">
       {/* Navigation Bar */}
-      <nav className="relative z-50 flex items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 border-b border-white/10">
+      <nav className="relative z-50 flex items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 border-b border-black/10">
         {/* Back Button and Logo */}
         <div className="flex items-center space-x-4">
           <Link
             href="/"
-            className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200"
+            className="flex items-center space-x-2 text-black/80 hover:text-black transition-colors duration-200"
           >
             <ArrowLeft size={20} />
             <span className="text-sm">Go Back</span>
           </Link>
           <div className="flex items-center space-x-2">
             <Image
-              src="/icon.png"
+              src="/favicon.png"
               alt="SGCC Logo Icon"
               width={20}
               height={20}
               className="inline-block mr-8"
             />
-            <div className="text-white font-semibold text-sm md:text-lg tracking-wide">
+            <div className="text-black font-semibold text-sm md:text-lg tracking-wide">
               SGCC Collection of Songs
             </div>
           </div>
@@ -80,7 +71,7 @@ export default function HymContent({ params }: HymContentProps) {
             className={`p-2 rounded-full border transition-all duration-200 ${
               isFavorite
                 ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
-                : "border-white/20 text-white/60 hover:border-white/40 hover:text-white/80"
+                : "border-black/20 text-black/60 hover:border-black/40 hover:text-black/80"
             }`}
           >
             <Heart size={16} fill={isFavorite ? "currentColor" : "none"} />
@@ -97,10 +88,10 @@ export default function HymContent({ params }: HymContentProps) {
             <div className="w-14 h-px bg-[#722b41] mx-auto"></div>
 
             <div>
-              <h1 className="text-white font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
+              <h1 className="text-black font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
                 {hymn.title.toUpperCase()}
               </h1>
-              <p className="text-[#C7C7C7] text-lg">
+              <p className="text-black/50 text-lg">
                 by {hymn.authors.join(", ")}{" "}
                 {!hymn.year ? "" : `© ${hymn.year}`}
               </p>
@@ -109,14 +100,14 @@ export default function HymContent({ params }: HymContentProps) {
         </div>
 
         {/* Verses Content */}
-        <div className="bg-white/5 border border-white/10 rounded-lg p-6 sm:p-8 lg:p-12">
+        <div className="bg-[#722b41]/5 border border-black/10 rounded-lg p-6 sm:p-8 lg:p-12">
           <div className="prose prose-invert max-w-none space-y-8">
             {hymn.verses.map((section, index) => (
               <div key={index} className="space-y-3">
                 <h3 className="text-[#722b41] font-semibold text-sm uppercase tracking-wide">
                   {formatSection(section)}
                 </h3>
-                <div className="text-white/90 text-xl leading-relaxed whitespace-pre-line pl-4 border-l border-white/20">
+                <div className="text-black/90 text-xl leading-relaxed whitespace-pre-line pl-4 border-l border-[#722b41]">
                   {section.content}
                 </div>
               </div>
@@ -126,17 +117,17 @@ export default function HymContent({ params }: HymContentProps) {
 
         {/* Footer Actions */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-white/60 text-sm">
+          <div className="text-black/60 text-md">
             Share the link to this hymn with others:
           </div>
 
           <div className="flex items-center space-x-4">
             <button
               onClick={() => shareLink(hymn.title)}
-              className="flex items-center gap-x-2 px-6 py-2 bg-[#722b41] text-[#fffff] font-semibold text-sm rounded-full transition-all duration-200"
+              className="flex items-center gap-x-2 px-6 py-2 bg-[#722b41] text-white font-semibold text-sm rounded-full transition-all duration-200"
             >
               <Share size={16} />
-              <span>Share Hymn</span>
+              Share Hymn
             </button>
           </div>
         </div>

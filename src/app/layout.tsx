@@ -10,7 +10,7 @@ const cardo = Cardo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sgcc-songs.netlify.app"),
+  metadataBase: new URL("https://songs.sgcc.ng"),
   title: {
     default: "SGCC Collection of Songs",
     template: "%s | SGCC Collection of Songs",

@@ -56,19 +56,19 @@ export default function HymnCollectionPage() {
 
             <div className="border-t border-black/10 p-4"></div>
 
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row gap-2 md:gap-0">
               {/* Search Bar */}
               <div className="relative flex-1">
                 <Search
                   size={16}
-                  className="absolute left-3 top-5 transform -translate-y-1/2 text-black/60"
+                  className="absolute left-3 top-5 transform -translate-y-1/2 text-black/60 md:top-1/2"
                 />
                 <input
                   type="text"
                   placeholder="Enter the hymn number, title, or author name..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="block w-full px-4 py-2 pl-10 bg-black/5 border border-black/20 rounded-tl-full rounded-bl-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
+                  className="block w-full px-4 py-2 pl-10 bg-black/5 border border-black/20 rounded-tr-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
                 />
               </div>
 
@@ -78,7 +78,7 @@ export default function HymnCollectionPage() {
                   <select
                     value={selectedAuthor}
                     onChange={(e) => setSelectedAuthor(e.target.value)}
-                    className="w-full px-4 py-2 bg-black/5 border border-black/20 rounded-tr-full rounded-br-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
+                    className="w-full px-4 py-2 bg-black/5 border border-black/20 rounded-bl-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
                   >
                     <option value="all" disabled>
                       Filter (by author name)

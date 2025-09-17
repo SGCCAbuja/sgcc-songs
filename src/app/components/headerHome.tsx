@@ -33,7 +33,7 @@ export default function Header() {
             <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
           </Link>
           <Link
-            href="#"
+            href="https://youtube.com/channel/UCWRXwx_RKv3aNxks9zGeXHw"
             className="text-black/80 hover:text-black active:text-black/60 text-sm tracking-wide transition-colors duration-200"
             target="_blank"
             rel="noopener noreferrer"

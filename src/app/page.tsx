@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import Header from "./components/headerHome";
+import Header from "@/app/components/headerHome";
 import { Search, Music, ArrowRight } from "lucide-react";
 
 import hymns from "@/app/data/hymns.json";
@@ -44,7 +44,7 @@ export default function HymnCollectionPage() {
               <h1 className="text-black font-semibold text-2xl sm:text-3xl lg:text-4xl leading-tight mb-2">
                 SGCC Collection of Songs
               </h1>
-              <p className="text-[#722b41] text-sm md:text-lg">
+              <p className="text-black/70 text-sm md:text-lg">
                 Explore the collection of{" "}
                 <span className="font-bold">{hymns.length}</span> hymns sang at{" "}
                 <span className="font-bold">

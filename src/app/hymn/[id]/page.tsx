@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, use } from "react";
+import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Music, Heart, Share } from "lucide-react";
+import Header from "@/app/components/headerHymn";
+import { Music, Share } from "lucide-react";
 
 import { formatSection } from "@/app/utils/formatSection";
 import { shareLink } from "@/app/utils/shareLink";
@@ -14,8 +15,6 @@ interface HymContentProps {
 }
 
 export default function HymContent({ params }: HymContentProps) {
-  const [isFavorite, setIsFavorite] = useState(false);
-
   const { id } = use(params);
   const hymnId = parseInt(id);
   const hymn = hymns.find((h) => h.id === hymnId);
@@ -39,52 +38,14 @@ export default function HymContent({ params }: HymContentProps) {
 
   return (
     <div className="min-h-screen relative">
-      {/* Navigation Bar */}
-      <nav className="relative z-50 flex items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 border-b border-black/10">
-        {/* Back Button and Logo */}
-        <div className="flex items-center space-x-4">
-          <Link
-            href="/"
-            className="flex items-center space-x-2 text-black/80 hover:text-black transition-colors duration-200"
-          >
-            <ArrowLeft size={20} />
-            <span className="text-sm">Go Back</span>
-          </Link>
-          <div className="flex items-center space-x-2">
-            <Image
-              src="/favicon.png"
-              alt="SGCC Logo Icon"
-              width={20}
-              height={20}
-              className="inline-block mr-8"
-            />
-            <div className="text-black font-semibold text-sm md:text-lg tracking-wide">
-              SGCC Collection of Songs
-            </div>
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={() => setIsFavorite(!isFavorite)}
-            className={`p-2 rounded-full border transition-all duration-200 ${
-              isFavorite
-                ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
-                : "border-black/20 text-black/60 hover:border-black/40 hover:text-black/80"
-            }`}
-          >
-            <Heart size={16} fill={isFavorite ? "currentColor" : "none"} />
-          </button>
-        </div>
-      </nav>
+      <Header />
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8">
         {/* Hymn Header */}
         <div className="mb-8 text-center">
           <div className="space-y-4 relative">
-            {/* Bronze rule */}
+            {/* Line */}
             <div className="w-14 h-px bg-[#722b41] mx-auto"></div>
 
             <div>

@@ -45,18 +45,12 @@ export default function HymContent({ params }: HymContentProps) {
         {/* Hymn Header */}
         <div className="mb-8 text-center">
           <div className="space-y-4 relative">
-            {/* Line */}
-            <div className="w-14 h-px bg-[#722b41] mx-auto"></div>
-
-            <div>
-              <h1 className="text-black font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
-                {hymn.title.toUpperCase()}
-              </h1>
-              <p className="text-black/50 text-lg">
-                by {hymn.authors.join(", ")}{" "}
-                {!hymn.year ? "" : `© ${hymn.year}`}
-              </p>
-            </div>
+            <h1 className="text-black font-semibold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-2">
+              {hymn.title.toUpperCase()}
+            </h1>
+            <p className="text-black/50 text-lg">
+              by {hymn.authors.join(", ")} {!hymn.year ? "" : `© ${hymn.year}`}
+            </p>
           </div>
         </div>
 
@@ -92,7 +86,7 @@ export default function HymContent({ params }: HymContentProps) {
             </button>
           </div>
         </div>
-        <hr className="my-8 border-white/10" />
+        <hr className="my-8 bg-[#722b41]/80" />
         <Image
           src="/logo.png"
           alt="SGCC Logo"

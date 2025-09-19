@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/components/headerHome";
 import { Search, Music, ArrowRight } from "lucide-react";
@@ -159,6 +160,17 @@ export default function HymnCollectionPage() {
                 </p>
               </div>
             )}
+
+            <div>
+              <hr className="my-8 bg-[#722b41]/80" />
+              <Image
+                src="/logo.png"
+                alt="SGCC Logo"
+                width={150}
+                height={150}
+                className="flex items-center justify-center mx-auto mt-12"
+              />
+            </div>
           </div>
         </div>
       </div>

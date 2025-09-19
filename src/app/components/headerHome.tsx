@@ -32,14 +32,6 @@ export default function Header() {
             Church Website →
             <div className="absolute -bottom-1 left-0 w-full h-px bg-[#722b41]"></div>
           </Link>
-          <Link
-            href="https://youtube.com/channel/UCWRXwx_RKv3aNxks9zGeXHw"
-            className="text-black/80 hover:text-black active:text-black/60 text-sm tracking-wide transition-colors duration-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Join us Live 🎥
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -53,23 +45,15 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-[#121212] border-b border-black/10 p-4 z-40">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-black/10 p-4 z-40">
           <div className="flex flex-col space-y-4">
             <Link
-              href="#"
+              href="https://sgcc.ng"
               className="text-black text-sm tracking-wide relative hover:text-black/90 active:text-black/70 transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
             >
               Church Website →
-            </Link>
-            <Link
-              href="#"
-              className="text-black/80 hover:text-black active:text-black/60 text-sm tracking-wide transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join us Live 🎥
             </Link>
           </div>
         </div>

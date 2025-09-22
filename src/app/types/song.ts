@@ -1,4 +1,4 @@
-export type Hymn = {
+export type SongType = {
   id: number;
   title: string;
   authors: string[];

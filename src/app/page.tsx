@@ -6,27 +6,27 @@ import Link from "next/link";
 import Header from "@/app/components/headerHome";
 import { Search, Music, ArrowRight } from "lucide-react";
 
-import hymns from "@/app/data/hymns.json";
-import { Hymn } from "@/app/types/hymn";
+import songs from "@/app/data/songs.json";
+import { SongType } from "@/app/types/song";
 
-export default function HymnCollectionPage() {
+export default function SongCollectionPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("all");
 
-  const authors = ["all", ...new Set(hymns.flatMap((hymn) => hymn.authors))];
+  const authors = ["all", ...new Set(songs.flatMap((song) => song.authors))];
 
-  const filteredHymns = useMemo(() => {
-    return hymns.filter((hymn: Hymn) => {
+  const filteredSongs = useMemo(() => {
+    return songs.filter((song: SongType) => {
       const matchesSearch =
         searchQuery === "" ||
-        hymn.id.toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hymn.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hymn.authors.some((author) =>
+        song.id.toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
+        song.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        song.authors.some((author) =>
           author.toLowerCase().includes(searchQuery.toLowerCase())
         );
 
       const matchesAuthor =
-        selectedAuthor === "all" || hymn.authors.includes(selectedAuthor);
+        selectedAuthor === "all" || song.authors.includes(selectedAuthor);
 
       return matchesSearch && matchesAuthor;
     });
@@ -47,7 +47,8 @@ export default function HymnCollectionPage() {
               </h1>
               <p className="text-black/70 text-sm md:text-lg">
                 Explore the collection of{" "}
-                <span className="font-bold">{hymns.length}</span> hymns sang at{" "}
+                <span className="font-bold">{songs.length}</span> songs and
+                hymns from{" "}
                 <span className="font-bold">
                   Sovereign Grace Community Church, Abuja
                 </span>
@@ -66,7 +67,7 @@ export default function HymnCollectionPage() {
                 />
                 <input
                   type="text"
-                  placeholder="Enter the hymn number, title, or author name..."
+                  placeholder="Enter the song number, title, or author name..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="block w-full px-4 py-2 pl-10 bg-black/5 border border-black/20 rounded-tr-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
@@ -98,8 +99,8 @@ export default function HymnCollectionPage() {
 
                 {selectedAuthor !== "all" && (
                   <div className="mt-2 text-black/60 text-sm">
-                    Showing {filteredHymns.length} hymn
-                    {filteredHymns.length !== 1 ? "s" : ""} by:{" "}
+                    Showing {filteredSongs.length} song
+                    {filteredSongs.length !== 1 ? "s" : ""} by:{" "}
                     <span className="font-bold">{selectedAuthor}</span>.
                   </div>
                 )}
@@ -110,28 +111,28 @@ export default function HymnCollectionPage() {
 
             {/* Song Cards */}
             <div className="grid gap-4 sm:gap-6">
-              {filteredHymns.map((hymn) => (
+              {filteredSongs.map((song) => (
                 <div
-                  key={hymn.id}
+                  key={song.id}
                   className="bg-[#722b41]/10 border border-black/10 rounded-xl p-4 sm:p-6 hover:border-white/20 transition-all duration-200 cursor-pointer"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex-1">
-                      <Link href={`/hymn/${hymn.id}`}>
+                      <Link href={`/song/${song.id}`}>
                         <div className="text-[#722b41] flex items-center space-x-2 mb-2">
                           <Music size={16} />
-                          <p className="text-2xl font-bold">{hymn.id}</p>
+                          <p className="text-2xl font-bold">{song.id}</p>
                         </div>
                         <div className="mb-2">
                           <h3 className="text-black font-semibold text-lg group-hover: transition-colors duration-200">
-                            {hymn.title}
+                            {song.title}
                           </h3>
                         </div>
 
                         <div className="space-y-1 mb-3">
                           <p className="text-black/80 text-sm">
-                            by {hymn.authors.join(", ")}{" "}
-                            <span>{!hymn.year ? "" : `© ${hymn.year}`}</span>
+                            by {song.authors.join(", ")}{" "}
+                            <span>{!song.year ? "" : `© ${song.year}`}</span>
                           </p>
                         </div>
                       </Link>
@@ -139,7 +140,7 @@ export default function HymnCollectionPage() {
 
                     <div className="mt-4 sm:mt-0 sm:ml-6">
                       <Link
-                        href={`/hymn/${hymn.id}`}
+                        href={`/song/${song.id}`}
                         className="inline-flex items-center space-x-2 px-4 py-2 bg-[#722b41] text-[#ffffff] font-semibold text-sm rounded-full transition-all duration-200"
                       >
                         <span>View Lyrics</span>
@@ -151,10 +152,10 @@ export default function HymnCollectionPage() {
               ))}
             </div>
 
-            {filteredHymns.length === 0 && (
+            {filteredSongs.length === 0 && (
               <div className="text-center py-12">
                 <Music size={48} className="text-black/30 mx-auto mb-4" />
-                <h3 className="text-black/80 text-lg mb-2">No hymns found.</h3>
+                <h3 className="text-black/80 text-lg mb-2">No songs found.</h3>
                 <p className="text-black/40 text-sm">
                   Try adjusting your search or filters...
                 </p>

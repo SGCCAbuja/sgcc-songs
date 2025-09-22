@@ -1,22 +1,20 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 
-const hymns = require('../app/data/hymns.json');
+const songs = require("../app/data/songs.json");
 
-const baseUrl = 'https://songs.sgcc.ng';
+const baseUrl = "https://songs.sgcc.ng";
 
-const staticPages = [
-  { path: '', changefreq: 'yearly' },
-];
+const staticPages = [{ path: "", changefreq: "yearly" }];
 
-const urls = staticPages.map(page => ({
+const urls = staticPages.map((page) => ({
   loc: `${baseUrl}/${page.path}`,
   changefreq: page.changefreq,
 }));
 
-hymns.forEach(hymn => {
+songs.forEach((song) => {
   urls.push({
-    loc: `${baseUrl}/hymn/${hymn.id}`,
-    changefreq: 'weekly',
+    loc: `${baseUrl}/song/${song.id}`,
+    changefreq: "weekly",
   });
 });
 
@@ -32,9 +30,9 @@ ${urls
   </url>
 `
   )
-  .join('')}
+  .join("")}
 </urlset>`;
 
-const fs = require('fs');
-fs.writeFileSync('public/sitemap.xml', sitemap);
-console.log('✅ sitemap.xml generated successfully!');
+const fs = require("fs");
+fs.writeFileSync("public/sitemap.xml", sitemap);
+console.log("✅ sitemap.xml generated successfully!");

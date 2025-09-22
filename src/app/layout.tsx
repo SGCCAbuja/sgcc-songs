@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | SGCC Collection of Songs",
   },
   description:
-    "A collection of hymns from Sovereign Grace Community Church, Abuja.",
+    "A collection of songs from Sovereign Grace Community Church, Abuja.",
   applicationName: "SGCC Collection of Songs",
   manifest: "/manifest.json",
   appleWebApp: {

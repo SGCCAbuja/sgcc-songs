@@ -2,7 +2,7 @@
 
 [![](./public/cover.png)](https://songs.sgcc.ng)
 
-A collection of hymns sang at Sovereign Grace Community Church, Abuja.
+A collection of songs and hymns from Sovereign Grace Community Church, Abuja.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d1bf82a6-b4cb-41fb-baba-2f50a290773c/deploy-status)](https://app.netlify.com/projects/sgcc-songs/deploys)
 
@@ -14,14 +14,14 @@ A collection of hymns sang at Sovereign Grace Community Church, Abuja.
 
 | **Path**    | **Description**       |
 | ----------- | --------------------- |
-| `/src/app/data/hymns.ts`           | Data file containing the collection of hymns.     |
-| `/src/app/hymn/[id]/page.tsx`      | Dynamic route for displaying individual hymns.  |
-| `/src/app/types/hymn.ts`           | Type definitions for hymns.                     |
-| `/src/app/utils/formatSection.ts`  | Utility for formatting hymn sections.           |
-| `/src/app/utils/shareLink.ts`      | Utility for generating shareable links.         |
-| `/src/app/globals.css`             | Global CSS styles for the application.          |
-| `/src/app/layout.tsx`              | Shared layout for fonts and metadata.           |
-| `/src/app/page.tsx`                | Home page (`/`).                                |
+| `/src/app/data/songs.json`          | Data file containing the collection of songs.     |
+| `/src/app/song/[id]/page.tsx`       | Dynamic route for displaying individual songs.  |
+| `/src/app/types/song.ts`            | Type definitions for songs.                     |
+| `/src/app/utils/formatSection.ts`   | Utility for formatting song sections.           |
+| `/src/app/utils/shareLink.ts`       | Utility for generating shareable links.         |
+| `/src/app/globals.css`              | Global CSS styles for the application.          |
+| `/src/app/layout.tsx`               | Shared layout for fonts and metadata.           |
+| `/src/app/page.tsx`                 | Home page (`/`).                                |
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ To run this application locally, kindly follow the steps below:
 
 4. Open [`http://localhost:3000`](http://localhost:3000) with your browser to see the result.
 
-5. All good! You can start modifying any page and the app will auto-update.
+5. All good! You can start modifying any page, and the app will auto-update.
 
 
 ## Contributors Guide

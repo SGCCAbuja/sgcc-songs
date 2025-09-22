@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/hymn/*"
+  to = "/song/:splat"
+  status = 301
+  force = true

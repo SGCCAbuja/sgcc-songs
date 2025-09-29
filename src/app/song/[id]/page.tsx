@@ -38,7 +38,7 @@ export default function SongContent({ params }: SongContentProps) {
 
   return (
     <div className="min-h-screen relative">
-      <Header />
+      <Header songId={songId} songTitle={song.title} />
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8">

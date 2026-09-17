@@ -10,3 +10,8 @@ export type SongType = {
   }[];
   note?: string;
 };
+
+export interface SongHeaderProps {
+  songId: number;
+  songTitle: string;
+}

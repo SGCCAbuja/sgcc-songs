@@ -6,9 +6,9 @@ import Link from "next/link";
 import Header from "@/app/components/headerHome";
 import { Search, Music, ArrowRight } from "lucide-react";
 
+import { Heart } from "lucide-react";
 import songs from "@/app/data/songs.json";
 import { SongType } from "@/app/types/song";
-import { Heart } from "lucide-react";
 
 export default function SongCollectionPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,7 +22,7 @@ export default function SongCollectionPage() {
       setFavoriteSongs(JSON.parse(stored));
     }
   }, []);
-  
+
   useEffect(() => {
     const handleStorageChange = () => {
       const stored = localStorage.getItem("favoriteSongs");
@@ -36,7 +36,6 @@ export default function SongCollectionPage() {
   const authors = ["all", ...new Set(songs.flatMap((song) => song.authors))];
 
   const filteredSongs = useMemo(() => {
-    
     return songs.filter((song: SongType) => {
       const matchesSearch =
         searchQuery === "" ||
@@ -54,8 +53,6 @@ export default function SongCollectionPage() {
       return matchesSearch && matchesAuthor && matchesFavorite;
     });
   }, [searchQuery, selectedAuthor, showFavorite, favoriteSongs]);
-
-  
 
   return (
     <div className="min-h-screen relative">
@@ -83,12 +80,12 @@ export default function SongCollectionPage() {
 
             <div className="border-t border-black/10 p-4"></div>
 
-            <div className="flex flex-col md:flex-row gap-2 md:gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_auto] gap-2">
               {/* Search Bar */}
-              <div className="relative flex-1">
+              <div className="relative">
                 <Search
                   size={16}
-                  className="absolute left-3 top-5 transform -translate-y-1/2 text-black/60 md:top-1/2"
+                  className="absolute left-3 top-5 transform -translate-y-1/2 text-black/60"
                 />
                 <input
                   type="text"
@@ -100,27 +97,26 @@ export default function SongCollectionPage() {
               </div>
 
               {/* Filter Dropdown */}
-              <div className="w-full md:w-1/3">
-                <div className="space-y-2">
-                  <select
-                    value={selectedAuthor}
-                    onChange={(e) => setSelectedAuthor(e.target.value)}
-                    className="w-full px-4 py-2 bg-black/5 border border-black/20 rounded-bl-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
-                  >
-                    <option value="all" disabled>
-                      Filter (by author name)
+              <div>
+                <select
+                  value={selectedAuthor}
+                  onChange={(e) => setSelectedAuthor(e.target.value)}
+                  className="w-full px-4 py-2 bg-black/5 border border-black/20 rounded-bl-full text-black text-md focus:outline-none focus:border-[#722b41] transition-all duration-200"
+                >
+                  <option value="all" disabled>
+                    Filter (by author name)
+                  </option>
+
+                  {authors.sort().map((author) => (
+                    <option
+                      key={author}
+                      value={author}
+                      className="bg-[#121212]"
+                    >
+                      {author === "all" ? "All Authors" : author}
                     </option>
-                    {authors.sort().map((author) => (
-                      <option
-                        key={author}
-                        value={author}
-                        className="bg-[#121212]"
-                      >
-                        {author === "all" ? "All Authors" : author}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
 
                 {selectedAuthor !== "all" && (
                   <div className="mt-2 text-black/60 text-sm">
@@ -130,24 +126,33 @@ export default function SongCollectionPage() {
                   </div>
                 )}
               </div>
+
+              {/* Favorites */}
+              <div className="flex items-start">
+                <button
+                  onClick={() => setShowFavorite((prev) => !prev)}
+                  className={`p-2 rounded-full border transition-all duration-200 ${
+                    showFavorite
+                      ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
+                      : "border-black/20 text-black/60 hover:border-black/40 hover:text-black/80"
+                  }`}
+                >
+                  <Heart
+                    size={16}
+                    fill={showFavorite ? "currentColor" : "none"}
+                  />
+                </button>
+              </div>
             </div>
-            <button
-              onClick={() => setShowFavorite((prev) => !prev)}
-              className={`p-2 rounded-full border transition-all duration-200 ${
-                showFavorite
-                  ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
-                  : "border-black/20 text-black/60 hover:border-black/40 hover:text-black/80"
-              }`}
-            >
-              <Heart size={16} fill={showFavorite ? "currentColor" : "none"} />
-        </button>
-         
+
             <div className="border-t border-white/10 p-4"></div>
 
             {showFavorite && favoriteSongs.length === 0 && (
               <div className="text-center py-12">
                 <Music size={48} className="text-black/30 mx-auto mb-4" />
-                <h3 className="text-black/80 text-lg mb-2">No favorite songs yet.</h3>
+                <h3 className="text-black/80 text-lg mb-2">
+                  No favorite songs yet.
+                </h3>
               </div>
             )}
 
@@ -194,17 +199,18 @@ export default function SongCollectionPage() {
               ))}
             </div>
 
-            {filteredSongs.length === 0 && !(
-              showFavorite && favoriteSongs.length === 0
-            ) && (
-              <div className="text-center py-12">
-                <Music size={48} className="text-black/30 mx-auto mb-4" />
-                <h3 className="text-black/80 text-lg mb-2">No songs found.</h3>
-                <p className="text-black/40 text-sm">
-                  Try adjusting your search or filters...
-                </p>
-              </div>
-            )}
+            {filteredSongs.length === 0 &&
+              !(showFavorite && favoriteSongs.length === 0) && (
+                <div className="text-center py-12">
+                  <Music size={48} className="text-black/30 mx-auto mb-4" />
+                  <h3 className="text-black/80 text-lg mb-2">
+                    No songs found.
+                  </h3>
+                  <p className="text-black/40 text-sm">
+                    Try adjusting your search or filters...
+                  </p>
+                </div>
+              )}
 
             <div>
               <hr className="my-8 bg-[#722b41]/80" />

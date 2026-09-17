@@ -119,7 +119,7 @@ export default function SongCollectionPage() {
                 </select>
 
                 {selectedAuthor !== "all" && (
-                  <div className="mt-2 text-black/60 text-sm">
+                  <div className="mt-2 text-black/60 text-sm text-right">
                     Showing {filteredSongs.length} song
                     {filteredSongs.length !== 1 ? "s" : ""} by:{" "}
                     <span className="font-bold">{selectedAuthor}</span>.
@@ -128,7 +128,7 @@ export default function SongCollectionPage() {
               </div>
 
               {/* Favorites */}
-              <div className="flex items-start">
+              <div className="flex items-start justify-end md:justify-start">
                 <button
                   onClick={() => setShowFavorite((prev) => !prev)}
                   className={`p-2 rounded-full border transition-all duration-200 ${
@@ -146,15 +146,6 @@ export default function SongCollectionPage() {
             </div>
 
             <div className="border-t border-white/10 p-4"></div>
-
-            {showFavorite && favoriteSongs.length === 0 && (
-              <div className="text-center py-12">
-                <Music size={48} className="text-black/30 mx-auto mb-4" />
-                <h3 className="text-black/80 text-lg mb-2">
-                  No favorite songs yet.
-                </h3>
-              </div>
-            )}
 
             {/* Song Cards */}
             <div className="grid gap-4 sm:gap-6">

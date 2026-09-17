@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/components/headerHome";
@@ -9,29 +9,14 @@ import { Search, Music, ArrowRight } from "lucide-react";
 import { Heart } from "lucide-react";
 import songs from "@/app/data/songs.json";
 import { SongType } from "@/app/types/song";
+import { useFavorites } from "@/app/hooks/use-favorite";
 
 export default function SongCollectionPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("all");
   const [showFavorite, setShowFavorite] = useState(false);
-  const [favoriteSongs, setFavoriteSongs] = useState<number[]>([]);
 
-  useEffect(() => {
-    const stored = localStorage.getItem("favoriteSongs");
-    if (stored) {
-      setFavoriteSongs(JSON.parse(stored));
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const stored = localStorage.getItem("favoriteSongs");
-      setFavoriteSongs(stored ? JSON.parse(stored) : []);
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
-  }, []);
+  const { favoriteSongs } = useFavorites();
 
   const authors = ["all", ...new Set(songs.flatMap((song) => song.authors))];
 

@@ -5,22 +5,22 @@ import { useEffect, useState } from "react";
 const FAVORITES_KEY = "favoriteSongs";
 
 export function useFavorites() {
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favoriteSongs, setFavoriteSongs] = useState<number[]>([]);
 
   useEffect(() => {
     try {
       const stored = localStorage.getItem(FAVORITES_KEY);
 
       if (stored) {
-        setFavorites(JSON.parse(stored));
+        setFavoriteSongs(JSON.parse(stored));
       }
     } catch {
-      setFavorites([]);
+      setFavoriteSongs([]);
     }
   }, []);
 
   const toggleFavorite = (songId: number) => {
-    setFavorites((current) => {
+    setFavoriteSongs((current) => {
       const next = current.includes(songId)
         ? current.filter((id) => id !== songId)
         : [...current, songId];
@@ -31,10 +31,10 @@ export function useFavorites() {
     });
   };
 
-  const checkFavorite = (songId: number) => favorites.includes(songId);
+  const checkFavorite = (songId: number) => favoriteSongs.includes(songId);
 
   return {
-    favorites,
+    favoriteSongs,
     checkFavorite,
     toggleFavorite,
   };

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowLeft, Heart } from "lucide-react";
-import { useFavorites } from "../hooks/use-favorite";
+import { useFavorites } from "@/app/hooks/use-favorite";
 import { SongHeaderProps } from "@/app/types/song";
 
 export default function Header({ songId }: SongHeaderProps) {

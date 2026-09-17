@@ -1,12 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 
 import { ArrowLeft, Heart } from "lucide-react";
 
-export default function Header() {
+interface HeaderProps {
+  songId: number;
+  songTitle: string;
+}
+
+export default function Header({songId, songTitle}: HeaderProps) {
   const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const storedFavorite = localStorage.getItem("favoriteSongs");
+    const favoriteSongs: number[] = storedFavorite ? JSON.parse(storedFavorite) : [];
+    setIsFavorite(favoriteSongs.includes(songId));
+  }, [songId]);
+
+  const handleClick = () => {
+    const storedFavorite = localStorage.getItem("favoriteSongs");
+   let favoriteSongs = storedFavorite ? JSON.parse(storedFavorite) : [];
+    if (!isFavorite) {
+    // Add this song
+    favoriteSongs.push(songId );
+  } else {
+    // Remove this song
+    favoriteSongs = favoriteSongs.filter((id) => id !== songId);
+  }
+    setIsFavorite(!isFavorite);
+    localStorage.setItem("favoriteSongs", JSON.stringify(favoriteSongs));
+    console.log(favoriteSongs);
+  }
+  
 
   return (
     <nav className="relative z-50 flex items-center justify-between h-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 border-b border-black/10">
@@ -34,7 +61,7 @@ export default function Header() {
 
       <div className="flex items-center space-x-4">
         <button
-          onClick={() => setIsFavorite(!isFavorite)}
+          onClick={handleClick}
           className={`p-2 rounded-full border transition-all duration-200 ${
             isFavorite
               ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"

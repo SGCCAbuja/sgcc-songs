@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/components/headerHome";
@@ -8,14 +8,35 @@ import { Search, Music, ArrowRight } from "lucide-react";
 
 import songs from "@/app/data/songs.json";
 import { SongType } from "@/app/types/song";
+import { Heart } from "lucide-react";
 
 export default function SongCollectionPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("all");
+  const [showFavorite, setShowFavorite] = useState(false);
+  const [favoriteSongs, setFavoriteSongs] = useState<number[]>([]);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("favoriteSongs");
+    if (stored) {
+      setFavoriteSongs(JSON.parse(stored));
+    }
+  }, []);
+  
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const stored = localStorage.getItem("favoriteSongs");
+      setFavoriteSongs(stored ? JSON.parse(stored) : []);
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   const authors = ["all", ...new Set(songs.flatMap((song) => song.authors))];
 
   const filteredSongs = useMemo(() => {
+    
     return songs.filter((song: SongType) => {
       const matchesSearch =
         searchQuery === "" ||
@@ -28,9 +49,13 @@ export default function SongCollectionPage() {
       const matchesAuthor =
         selectedAuthor === "all" || song.authors.includes(selectedAuthor);
 
-      return matchesSearch && matchesAuthor;
+      const matchesFavorite = !showFavorite || favoriteSongs.includes(song.id);
+
+      return matchesSearch && matchesAuthor && matchesFavorite;
     });
-  }, [searchQuery, selectedAuthor]);
+  }, [searchQuery, selectedAuthor, showFavorite, favoriteSongs]);
+
+  
 
   return (
     <div className="min-h-screen relative">
@@ -106,8 +131,25 @@ export default function SongCollectionPage() {
                 )}
               </div>
             </div>
-
+            <button
+              onClick={() => setShowFavorite((prev) => !prev)}
+              className={`p-2 rounded-full border transition-all duration-200 ${
+                showFavorite
+                  ? "border-[#722b41] bg-[#722b41]/20 text-[#722b41]"
+                  : "border-black/20 text-black/60 hover:border-black/40 hover:text-black/80"
+              }`}
+            >
+              <Heart size={16} fill={showFavorite ? "currentColor" : "none"} />
+        </button>
+         
             <div className="border-t border-white/10 p-4"></div>
+
+            {showFavorite && favoriteSongs.length === 0 && (
+              <div className="text-center py-12">
+                <Music size={48} className="text-black/30 mx-auto mb-4" />
+                <h3 className="text-black/80 text-lg mb-2">No favorite songs yet.</h3>
+              </div>
+            )}
 
             {/* Song Cards */}
             <div className="grid gap-4 sm:gap-6">
@@ -152,7 +194,9 @@ export default function SongCollectionPage() {
               ))}
             </div>
 
-            {filteredSongs.length === 0 && (
+            {filteredSongs.length === 0 && !(
+              showFavorite && favoriteSongs.length === 0
+            ) && (
               <div className="text-center py-12">
                 <Music size={48} className="text-black/30 mx-auto mb-4" />
                 <h3 className="text-black/80 text-lg mb-2">No songs found.</h3>

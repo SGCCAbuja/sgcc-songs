@@ -14,9 +14,10 @@ A collection of songs and hymns from Sovereign Grace Community Church, Abuja.
 
 | **Path**    | **Description**       |
 | ----------- | --------------------- |
-| `/src/app/data/songs.json`          | Data file containing the collection of songs.     |
+| `/src/app/data/songs.json`          | Data file containing the collection of songs.   |
 | `/src/app/song/[id]/page.tsx`       | Dynamic route for displaying individual songs.  |
 | `/src/app/types/song.ts`            | Type definitions for songs.                     |
+| `/src/app/hooks/favorites.ts`       | Hook for adding songs to a favorite list.       |
 | `/src/app/utils/formatSection.ts`   | Utility for formatting song sections.           |
 | `/src/app/utils/shareLink.ts`       | Utility for generating shareable links.         |
 | `/src/app/globals.css`              | Global CSS styles for the application.          |

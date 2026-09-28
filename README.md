@@ -24,6 +24,45 @@ A collection of songs and hymns from Sovereign Grace Community Church, Abuja.
 | `/src/app/layout.tsx`               | Shared layout for fonts and metadata.           |
 | `/src/app/page.tsx`                 | Home page (`/`).                                |
 
+## Songs Database Schema
+
+- **id** (`integer`): Unique identifier for each song.
+- **title** (`string`): Title of the song.
+- **authors** (`array of strings`): List of authors of the song.
+- **year** (`integer` or `null`): Year the song was written; can be null if unknown.
+- **verses** (`array of objects`): List of verses in the song.
+  - **type** (`string`): Type of the verse, e.g., "verse", "chorus", "bridge", "outro", etc.
+  - **number** (`integer`) The order number of the verse within the song.
+  - **content** (`string`) The text content of the verse.
+ 
+Example JSON:
+
+```
+  {
+    "id": 4,
+    "title": "You Are Beautiful Beyond Description (I Stand In Awe)",
+    "authors": ["Mark Altrogge", "Sovereign Grace Praise"],
+    "year": 1986,
+    "verses": [
+      {
+        "type": "verse",
+        "number": 1,
+        "content": "You are beautiful beyond description\nToo marvelous for words\nToo wonderful for comprehension\nLike nothing ever seen or heard\nWho can grasp Your infinite wisdom?\nWho can fathom the depth of Your love?\nYou are beautiful beyond description\nMajesty, enthroned above"
+      },
+      {
+        "type": "chorus",
+        "number": 1,
+        "content": "And I stand, I stand in awe of You\nI stand, I stand in awe of You\nHoly God, to whom all praise is due\nI stand in awe of You"
+      },
+      {
+        "type": "verse",
+        "number": 2,
+        "content": "You are beautiful beyond description\nYet God crushed You for my sin\nIn agony and deep affliction\nCut off that I might enter in\nWho can grasp such tender compassion?\nWho can fathom this mercy so free?\nYou are beautiful beyond description\nLamb of God who died for me"
+      }
+    ]
+  },
+```
+
 ## Getting Started
 
 To run this application locally, kindly follow the steps below:

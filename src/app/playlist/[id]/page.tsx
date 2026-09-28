@@ -2,7 +2,7 @@
 
 import { use, useMemo } from "react";
 import { Music } from "lucide-react";
-import Header from "@/app/components/header";
+import Header from "@/app/components/headerHome";
 import Footer from "@/app/components/footer";
 import SongCard from "@/app/components/songCard";
 

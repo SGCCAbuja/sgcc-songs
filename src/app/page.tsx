@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { Search, Music, Heart } from "lucide-react";
 import { useFavorites } from "@/app/hooks/use-favorite";
-import Header from "@/app/components/header";
+import Header from "@/app/components/headerHome";
 import Footer from "@/app/components/footer";
 import SongCard from "@/app/components/songCard";
 

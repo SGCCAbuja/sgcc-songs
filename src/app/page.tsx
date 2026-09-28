@@ -148,7 +148,7 @@ export default function SongCollectionPage() {
                         </div>
                         <div className="mb-2">
                           <h3 className="text-black font-semibold text-lg group-hover: transition-colors duration-200">
-                            {song.title}
+                            {song.title.toUpperCase()}
                           </h3>
                         </div>
 

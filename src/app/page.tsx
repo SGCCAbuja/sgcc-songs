@@ -1,14 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
-import Header from "@/app/components/headerHome";
 import { Search, Music, Heart } from "lucide-react";
+import { useFavorites } from "@/app/hooks/use-favorite";
+import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
+import SongCard from "@/app/components/songCard";
 
 import songs from "@/app/data/songs.json";
 import { SongType } from "@/app/types/song";
-import { useFavorites } from "@/app/hooks/use-favorite";
-import SongCard from "@/app/components/songCard";
 
 export default function SongCollectionPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -159,17 +159,7 @@ export default function SongCollectionPage() {
               )}
 
             {/* Footer */}
-            <div>
-              <hr className="my-8 bg-[#722b41]/80" />
-
-              <Image
-                src="/logo.png"
-                alt="SGCC Logo"
-                width={150}
-                height={150}
-                className="flex items-center justify-center mx-auto mt-12"
-              />
-            </div>
+            <Footer />
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 "use client";
 
 import { use, useMemo } from "react";
-import Image from "next/image";
-import Header from "@/app/components/headerHome";
 import { Music } from "lucide-react";
+import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
 import SongCard from "@/app/components/songCard";
 
 import songs from "@/app/data/songs.json";
@@ -105,17 +105,7 @@ export default function PlaylistPage({ params }: Props) {
             )}
 
             {/* Footer */}
-            <div>
-              <hr className="my-8 bg-[#722b41]/80" />
-
-              <Image
-                src="/logo.png"
-                alt="SGCC Logo"
-                width={150}
-                height={150}
-                className="flex items-center justify-center mx-auto mt-12"
-              />
-            </div>
+            <Footer />
           </div>
         </div>
       </div>
